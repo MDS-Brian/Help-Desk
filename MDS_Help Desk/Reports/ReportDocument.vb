@@ -1,3 +1,4 @@
+Imports System.ComponentModel
 Imports System.Drawing.Printing
 
 ''' <summary>
@@ -16,10 +17,14 @@ Public Class ReportDocument
     Friend Shared ReadOnly LabelBrush As Brush = New SolidBrush(Color.FromArgb(96, 96, 96))
     Friend Shared ReadOnly RulePen As New Pen(Color.FromArgb(160, 160, 160), 1)
 
+    ' Set in code only, never in the forms designer.
+    <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
     Public Property Title As String
+    <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
     Public Property Subtitle As String
     Public ReadOnly Property Blocks As New List(Of ReportBlock)
     ''' <summary>Drawn under the title on every page, e.g. table column headings.</summary>
+    <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
     Public Property RepeatHeader As ReportBlock
 
     Private _pages As List(Of List(Of ReportBlock))
