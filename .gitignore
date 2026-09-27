@@ -1,0 +1,12 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build output
+bin/
+obj/
+publish/
+
+# Local overrides of settings (keep machine-specific connection strings out of Git)
+appsettings.local.json
