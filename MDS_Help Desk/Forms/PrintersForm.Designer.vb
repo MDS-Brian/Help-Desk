@@ -1,7 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class PrintersForm
-    Inherits System.Windows.Forms.Form
-
+    Inherits AppForm
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -23,9 +22,9 @@ Partial Class PrintersForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblFilterType = New System.Windows.Forms.Label()
-        Me.cboFilterType = New System.Windows.Forms.ComboBox()
+        Me.cboFilterType = New BorderedComboBox()
         Me.lblFilterLocation = New System.Windows.Forms.Label()
-        Me.cboFilterLocation = New System.Windows.Forms.ComboBox()
+        Me.cboFilterLocation = New BorderedComboBox()
         Me.cmdClearFilter = New System.Windows.Forms.Button()
         Me.lblCount = New System.Windows.Forms.Label()
         Me.dgvPrinters = New System.Windows.Forms.DataGridView()
@@ -37,13 +36,13 @@ Partial Class PrintersForm
         Me.lblMaker = New System.Windows.Forms.Label()
         Me.txtMaker = New System.Windows.Forms.TextBox()
         Me.lblType = New System.Windows.Forms.Label()
-        Me.cboType = New System.Windows.Forms.ComboBox()
+        Me.cboType = New BorderedComboBox()
         Me.lblIP = New System.Windows.Forms.Label()
         Me.txtIP = New System.Windows.Forms.TextBox()
         Me.lblConnected = New System.Windows.Forms.Label()
         Me.txtConnected = New System.Windows.Forms.TextBox()
         Me.lblLocation = New System.Windows.Forms.Label()
-        Me.cboLocation = New System.Windows.Forms.ComboBox()
+        Me.cboLocation = New BorderedComboBox()
         Me.lblNotes = New System.Windows.Forms.Label()
         Me.txtNotes = New System.Windows.Forms.TextBox()
         Me.cmdNew = New System.Windows.Forms.Button()
@@ -413,9 +412,9 @@ Partial Class PrintersForm
     End Sub
 
     Friend WithEvents lblFilterType As System.Windows.Forms.Label
-    Friend WithEvents cboFilterType As System.Windows.Forms.ComboBox
+    Friend WithEvents cboFilterType As BorderedComboBox
     Friend WithEvents lblFilterLocation As System.Windows.Forms.Label
-    Friend WithEvents cboFilterLocation As System.Windows.Forms.ComboBox
+    Friend WithEvents cboFilterLocation As BorderedComboBox
     Friend WithEvents cmdClearFilter As System.Windows.Forms.Button
     Friend WithEvents lblCount As System.Windows.Forms.Label
     Friend WithEvents dgvPrinters As System.Windows.Forms.DataGridView
@@ -427,13 +426,13 @@ Partial Class PrintersForm
     Friend WithEvents lblMaker As System.Windows.Forms.Label
     Friend WithEvents txtMaker As System.Windows.Forms.TextBox
     Friend WithEvents lblType As System.Windows.Forms.Label
-    Friend WithEvents cboType As System.Windows.Forms.ComboBox
+    Friend WithEvents cboType As BorderedComboBox
     Friend WithEvents lblIP As System.Windows.Forms.Label
     Friend WithEvents txtIP As System.Windows.Forms.TextBox
     Friend WithEvents lblConnected As System.Windows.Forms.Label
     Friend WithEvents txtConnected As System.Windows.Forms.TextBox
     Friend WithEvents lblLocation As System.Windows.Forms.Label
-    Friend WithEvents cboLocation As System.Windows.Forms.ComboBox
+    Friend WithEvents cboLocation As BorderedComboBox
     Friend WithEvents lblNotes As System.Windows.Forms.Label
     Friend WithEvents txtNotes As System.Windows.Forms.TextBox
     Friend WithEvents cmdNew As System.Windows.Forms.Button

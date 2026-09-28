@@ -1,7 +1,6 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class TicketEditForm
-    Inherits System.Windows.Forms.Form
-
+    Inherits AppForm
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -22,829 +21,870 @@ Partial Class TicketEditForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.grpStatus = New System.Windows.Forms.GroupBox()
-        Me.optOpen = New System.Windows.Forms.RadioButton()
-        Me.optClosed = New System.Windows.Forms.RadioButton()
-        Me.optAll = New System.Windows.Forms.RadioButton()
-        Me.grpAssigned = New System.Windows.Forms.GroupBox()
-        Me.optAnyAssigned = New System.Windows.Forms.RadioButton()
-        Me.optAssigned = New System.Windows.Forms.RadioButton()
-        Me.optNotAssigned = New System.Windows.Forms.RadioButton()
-        Me.lblQuickFind = New System.Windows.Forms.Label()
-        Me.txtQuickFind = New System.Windows.Forms.TextBox()
-        Me.cmdSearch = New System.Windows.Forms.Button()
-        Me.lblCount = New System.Windows.Forms.Label()
-        Me.lblFilterAccount = New System.Windows.Forms.Label()
-        Me.cboFilterAccount = New System.Windows.Forms.ComboBox()
-        Me.lblFilterUser = New System.Windows.Forms.Label()
-        Me.cboFilterUser = New System.Windows.Forms.ComboBox()
-        Me.lblFilterPriority = New System.Windows.Forms.Label()
-        Me.cboFilterPriority = New System.Windows.Forms.ComboBox()
-        Me.cmdClearFilter = New System.Windows.Forms.Button()
-        Me.dgvTickets = New System.Windows.Forms.DataGridView()
-        Me.grpTicket = New System.Windows.Forms.GroupBox()
-        Me.lblTicketNo = New System.Windows.Forms.Label()
-        Me.txtTicketNo = New System.Windows.Forms.TextBox()
-        Me.lblAccount = New System.Windows.Forms.Label()
-        Me.cboAccount = New System.Windows.Forms.ComboBox()
-        Me.lblRequestBy = New System.Windows.Forms.Label()
-        Me.cboRequestBy = New System.Windows.Forms.ComboBox()
-        Me.lblAddContact = New System.Windows.Forms.Label()
-        Me.cboAddContact = New System.Windows.Forms.ComboBox()
-        Me.lblCadenceID = New System.Windows.Forms.Label()
-        Me.txtCadenceID = New System.Windows.Forms.TextBox()
-        Me.cmdCadenceStatus = New System.Windows.Forms.Button()
-        Me.lblOrderNbr = New System.Windows.Forms.Label()
-        Me.txtOrderNbr = New System.Windows.Forms.TextBox()
-        Me.lblPC_Nbr = New System.Windows.Forms.Label()
-        Me.txtPC_Nbr = New System.Windows.Forms.TextBox()
-        Me.lblStatus = New System.Windows.Forms.Label()
-        Me.cboStatus = New System.Windows.Forms.ComboBox()
-        Me.lblPriority = New System.Windows.Forms.Label()
-        Me.cboPriority = New System.Windows.Forms.ComboBox()
-        Me.lblSoftware = New System.Windows.Forms.Label()
-        Me.cboSoftware = New System.Windows.Forms.ComboBox()
-        Me.lblAssignedTo = New System.Windows.Forms.Label()
-        Me.cboAssignedTo = New System.Windows.Forms.ComboBox()
-        Me.lblTier = New System.Windows.Forms.Label()
-        Me.cboTier = New System.Windows.Forms.ComboBox()
-        Me.lblResolution = New System.Windows.Forms.Label()
-        Me.cboResolution = New System.Windows.Forms.ComboBox()
-        Me.lblRequestDate = New System.Windows.Forms.Label()
-        Me.dtpRequestDate = New System.Windows.Forms.DateTimePicker()
-        Me.lblNeedBy = New System.Windows.Forms.Label()
-        Me.dtpNeedBy = New System.Windows.Forms.DateTimePicker()
-        Me.lblCloseDate = New System.Windows.Forms.Label()
-        Me.txtCloseDate = New System.Windows.Forms.TextBox()
-        Me.lblAutoClose = New System.Windows.Forms.Label()
-        Me.dtpAutoClose = New System.Windows.Forms.DateTimePicker()
-        Me.lblNotes = New System.Windows.Forms.Label()
-        Me.txtNotes = New System.Windows.Forms.TextBox()
-        Me.lblDescription = New System.Windows.Forms.Label()
-        Me.txtDescription = New System.Windows.Forms.TextBox()
-        Me.chkNotifyUpdates = New System.Windows.Forms.CheckBox()
-        Me.chkNotifyClose = New System.Windows.Forms.CheckBox()
-        Me.cmdQuickPrint = New System.Windows.Forms.Button()
-        Me.cmdUpdateTicket = New System.Windows.Forms.Button()
-        Me.cmdCloseTicket = New System.Windows.Forms.Button()
-        Me.cmdReset = New System.Windows.Forms.Button()
-        Me.cmdClose = New System.Windows.Forms.Button()
-        Me.grpStatus.SuspendLayout()
-        Me.grpAssigned.SuspendLayout()
-        CType(Me.dgvTickets, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.grpTicket.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'grpStatus
-        '
-        Me.grpStatus.Controls.Add(Me.optOpen)
-        Me.grpStatus.Controls.Add(Me.optClosed)
-        Me.grpStatus.Controls.Add(Me.optAll)
-        Me.grpStatus.Location = New System.Drawing.Point(12, 6)
-        Me.grpStatus.Name = "grpStatus"
-        Me.grpStatus.Size = New System.Drawing.Size(250, 54)
-        Me.grpStatus.TabIndex = 0
-        Me.grpStatus.TabStop = False
-        Me.grpStatus.Text = "Status"
-        '
-        'optOpen
-        '
-        Me.optOpen.AutoSize = True
-        Me.optOpen.Checked = True
-        Me.optOpen.Location = New System.Drawing.Point(12, 22)
-        Me.optOpen.Name = "optOpen"
-        Me.optOpen.TabIndex = 0
-        Me.optOpen.TabStop = True
-        Me.optOpen.Text = "Open"
-        Me.optOpen.UseVisualStyleBackColor = True
-        '
-        'optClosed
-        '
-        Me.optClosed.AutoSize = True
-        Me.optClosed.Location = New System.Drawing.Point(90, 22)
-        Me.optClosed.Name = "optClosed"
-        Me.optClosed.TabIndex = 1
-        Me.optClosed.Text = "Closed"
-        Me.optClosed.UseVisualStyleBackColor = True
-        '
-        'optAll
-        '
-        Me.optAll.AutoSize = True
-        Me.optAll.Location = New System.Drawing.Point(175, 22)
-        Me.optAll.Name = "optAll"
-        Me.optAll.TabIndex = 2
-        Me.optAll.Text = "All"
-        Me.optAll.UseVisualStyleBackColor = True
-        '
-        'grpAssigned
-        '
-        Me.grpAssigned.Controls.Add(Me.optAnyAssigned)
-        Me.grpAssigned.Controls.Add(Me.optAssigned)
-        Me.grpAssigned.Controls.Add(Me.optNotAssigned)
-        Me.grpAssigned.Location = New System.Drawing.Point(272, 6)
-        Me.grpAssigned.Name = "grpAssigned"
-        Me.grpAssigned.Size = New System.Drawing.Size(330, 54)
-        Me.grpAssigned.TabIndex = 1
-        Me.grpAssigned.TabStop = False
-        Me.grpAssigned.Text = "Assignment"
-        '
-        'optAnyAssigned
-        '
-        Me.optAnyAssigned.AutoSize = True
-        Me.optAnyAssigned.Checked = True
-        Me.optAnyAssigned.Location = New System.Drawing.Point(12, 22)
-        Me.optAnyAssigned.Name = "optAnyAssigned"
-        Me.optAnyAssigned.TabIndex = 0
-        Me.optAnyAssigned.TabStop = True
-        Me.optAnyAssigned.Text = "Any"
-        Me.optAnyAssigned.UseVisualStyleBackColor = True
-        '
-        'optAssigned
-        '
-        Me.optAssigned.AutoSize = True
-        Me.optAssigned.Location = New System.Drawing.Point(80, 22)
-        Me.optAssigned.Name = "optAssigned"
-        Me.optAssigned.TabIndex = 1
-        Me.optAssigned.Text = "Assigned"
-        Me.optAssigned.UseVisualStyleBackColor = True
-        '
-        'optNotAssigned
-        '
-        Me.optNotAssigned.AutoSize = True
-        Me.optNotAssigned.Location = New System.Drawing.Point(185, 22)
-        Me.optNotAssigned.Name = "optNotAssigned"
-        Me.optNotAssigned.TabIndex = 2
-        Me.optNotAssigned.Text = "Not Assigned"
-        Me.optNotAssigned.UseVisualStyleBackColor = True
-        '
-        'lblQuickFind
-        '
-        Me.lblQuickFind.Location = New System.Drawing.Point(620, 24)
-        Me.lblQuickFind.Name = "lblQuickFind"
-        Me.lblQuickFind.Size = New System.Drawing.Size(70, 23)
-        Me.lblQuickFind.TabIndex = 2
-        Me.lblQuickFind.Text = "Ticket No"
-        Me.lblQuickFind.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtQuickFind
-        '
-        Me.txtQuickFind.Location = New System.Drawing.Point(695, 22)
-        Me.txtQuickFind.MaxLength = 10
-        Me.txtQuickFind.Name = "txtQuickFind"
-        Me.txtQuickFind.Size = New System.Drawing.Size(90, 26)
-        Me.txtQuickFind.TabIndex = 3
-        '
-        'cmdSearch
-        '
-        Me.cmdSearch.BackColor = System.Drawing.Color.FromArgb(242, 242, 242)
-        Me.cmdSearch.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.cmdSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdSearch.Font = New System.Drawing.Font("Calibri", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdSearch.Location = New System.Drawing.Point(795, 17)
-        Me.cmdSearch.Name = "cmdSearch"
-        Me.cmdSearch.Size = New System.Drawing.Size(110, 36)
-        Me.cmdSearch.TabIndex = 4
-        Me.cmdSearch.Text = "Search"
-        Me.cmdSearch.UseVisualStyleBackColor = False
-        '
-        'lblCount
-        '
-        Me.lblCount.Font = New System.Drawing.Font("Calibri", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCount.Location = New System.Drawing.Point(920, 24)
-        Me.lblCount.Name = "lblCount"
-        Me.lblCount.Size = New System.Drawing.Size(248, 23)
-        Me.lblCount.TabIndex = 5
-        Me.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'lblFilterAccount
-        '
-        Me.lblFilterAccount.Location = New System.Drawing.Point(12, 68)
-        Me.lblFilterAccount.Name = "lblFilterAccount"
-        Me.lblFilterAccount.Size = New System.Drawing.Size(65, 23)
-        Me.lblFilterAccount.TabIndex = 6
-        Me.lblFilterAccount.Text = "Account"
-        Me.lblFilterAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cboFilterAccount
-        '
-        Me.cboFilterAccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboFilterAccount.Location = New System.Drawing.Point(80, 66)
-        Me.cboFilterAccount.Name = "cboFilterAccount"
-        Me.cboFilterAccount.Size = New System.Drawing.Size(270, 26)
-        Me.cboFilterAccount.TabIndex = 7
-        '
-        'lblFilterUser
-        '
-        Me.lblFilterUser.Location = New System.Drawing.Point(365, 68)
-        Me.lblFilterUser.Name = "lblFilterUser"
-        Me.lblFilterUser.Size = New System.Drawing.Size(95, 23)
-        Me.lblFilterUser.TabIndex = 8
-        Me.lblFilterUser.Text = "Requested By"
-        Me.lblFilterUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cboFilterUser
-        '
-        Me.cboFilterUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboFilterUser.Location = New System.Drawing.Point(462, 66)
-        Me.cboFilterUser.Name = "cboFilterUser"
-        Me.cboFilterUser.Size = New System.Drawing.Size(200, 26)
-        Me.cboFilterUser.TabIndex = 9
-        '
-        'lblFilterPriority
-        '
-        Me.lblFilterPriority.Location = New System.Drawing.Point(677, 68)
-        Me.lblFilterPriority.Name = "lblFilterPriority"
-        Me.lblFilterPriority.Size = New System.Drawing.Size(55, 23)
-        Me.lblFilterPriority.TabIndex = 10
-        Me.lblFilterPriority.Text = "Priority"
-        Me.lblFilterPriority.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cboFilterPriority
-        '
-        Me.cboFilterPriority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboFilterPriority.Location = New System.Drawing.Point(735, 66)
-        Me.cboFilterPriority.Name = "cboFilterPriority"
-        Me.cboFilterPriority.Size = New System.Drawing.Size(170, 26)
-        Me.cboFilterPriority.TabIndex = 11
-        '
-        'cmdClearFilter
-        '
-        Me.cmdClearFilter.BackColor = System.Drawing.Color.FromArgb(242, 242, 242)
-        Me.cmdClearFilter.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.cmdClearFilter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdClearFilter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdClearFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdClearFilter.Font = New System.Drawing.Font("Calibri", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdClearFilter.Location = New System.Drawing.Point(920, 61)
-        Me.cmdClearFilter.Name = "cmdClearFilter"
-        Me.cmdClearFilter.Size = New System.Drawing.Size(130, 36)
-        Me.cmdClearFilter.TabIndex = 12
-        Me.cmdClearFilter.Text = "Clear Filters"
-        Me.cmdClearFilter.UseVisualStyleBackColor = False
-        '
-        'dgvTickets
-        '
-        Me.dgvTickets.AllowUserToAddRows = False
-        Me.dgvTickets.AllowUserToDeleteRows = False
-        Me.dgvTickets.AllowUserToResizeRows = False
-        Me.dgvTickets.BackgroundColor = System.Drawing.Color.White
-        Me.dgvTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvTickets.Location = New System.Drawing.Point(12, 104)
-        Me.dgvTickets.MultiSelect = False
-        Me.dgvTickets.Name = "dgvTickets"
-        Me.dgvTickets.ReadOnly = True
-        Me.dgvTickets.RowHeadersVisible = False
-        Me.dgvTickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvTickets.Size = New System.Drawing.Size(1156, 290)
-        Me.dgvTickets.TabIndex = 13
-        '
-        'grpTicket
-        '
-        Me.grpTicket.Controls.Add(Me.lblTicketNo)
-        Me.grpTicket.Controls.Add(Me.txtTicketNo)
-        Me.grpTicket.Controls.Add(Me.lblAccount)
-        Me.grpTicket.Controls.Add(Me.cboAccount)
-        Me.grpTicket.Controls.Add(Me.lblRequestBy)
-        Me.grpTicket.Controls.Add(Me.cboRequestBy)
-        Me.grpTicket.Controls.Add(Me.lblAddContact)
-        Me.grpTicket.Controls.Add(Me.cboAddContact)
-        Me.grpTicket.Controls.Add(Me.lblCadenceID)
-        Me.grpTicket.Controls.Add(Me.txtCadenceID)
-        Me.grpTicket.Controls.Add(Me.cmdCadenceStatus)
-        Me.grpTicket.Controls.Add(Me.lblOrderNbr)
-        Me.grpTicket.Controls.Add(Me.txtOrderNbr)
-        Me.grpTicket.Controls.Add(Me.lblPC_Nbr)
-        Me.grpTicket.Controls.Add(Me.txtPC_Nbr)
-        Me.grpTicket.Controls.Add(Me.lblStatus)
-        Me.grpTicket.Controls.Add(Me.cboStatus)
-        Me.grpTicket.Controls.Add(Me.lblPriority)
-        Me.grpTicket.Controls.Add(Me.cboPriority)
-        Me.grpTicket.Controls.Add(Me.lblSoftware)
-        Me.grpTicket.Controls.Add(Me.cboSoftware)
-        Me.grpTicket.Controls.Add(Me.lblAssignedTo)
-        Me.grpTicket.Controls.Add(Me.cboAssignedTo)
-        Me.grpTicket.Controls.Add(Me.lblTier)
-        Me.grpTicket.Controls.Add(Me.cboTier)
-        Me.grpTicket.Controls.Add(Me.lblResolution)
-        Me.grpTicket.Controls.Add(Me.cboResolution)
-        Me.grpTicket.Controls.Add(Me.lblRequestDate)
-        Me.grpTicket.Controls.Add(Me.dtpRequestDate)
-        Me.grpTicket.Controls.Add(Me.lblNeedBy)
-        Me.grpTicket.Controls.Add(Me.dtpNeedBy)
-        Me.grpTicket.Controls.Add(Me.lblCloseDate)
-        Me.grpTicket.Controls.Add(Me.txtCloseDate)
-        Me.grpTicket.Controls.Add(Me.lblAutoClose)
-        Me.grpTicket.Controls.Add(Me.dtpAutoClose)
-        Me.grpTicket.Controls.Add(Me.lblNotes)
-        Me.grpTicket.Controls.Add(Me.txtNotes)
-        Me.grpTicket.Controls.Add(Me.lblDescription)
-        Me.grpTicket.Controls.Add(Me.txtDescription)
-        Me.grpTicket.Enabled = False
-        Me.grpTicket.Location = New System.Drawing.Point(12, 402)
-        Me.grpTicket.Name = "grpTicket"
-        Me.grpTicket.Size = New System.Drawing.Size(1156, 356)
-        Me.grpTicket.TabIndex = 14
-        Me.grpTicket.TabStop = False
-        Me.grpTicket.Text = "Ticket (double-click a ticket above to open it)"
-        '
-        'lblTicketNo
-        '
-        Me.lblTicketNo.Location = New System.Drawing.Point(12, 26)
-        Me.lblTicketNo.Name = "lblTicketNo"
-        Me.lblTicketNo.Size = New System.Drawing.Size(110, 23)
-        Me.lblTicketNo.TabIndex = 0
-        Me.lblTicketNo.Text = "Current Ticket"
-        Me.lblTicketNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtTicketNo
-        '
-        Me.txtTicketNo.Font = New System.Drawing.Font("Calibri", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTicketNo.Location = New System.Drawing.Point(125, 24)
-        Me.txtTicketNo.Name = "txtTicketNo"
-        Me.txtTicketNo.ReadOnly = True
-        Me.txtTicketNo.Size = New System.Drawing.Size(100, 26)
-        Me.txtTicketNo.TabIndex = 1
-        Me.txtTicketNo.TabStop = False
-        '
-        'lblAccount
-        '
-        Me.lblAccount.Location = New System.Drawing.Point(12, 58)
-        Me.lblAccount.Name = "lblAccount"
-        Me.lblAccount.Size = New System.Drawing.Size(110, 23)
-        Me.lblAccount.TabIndex = 2
-        Me.lblAccount.Text = "Account No"
-        Me.lblAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cboAccount
-        '
-        Me.cboAccount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.cboAccount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.cboAccount.Location = New System.Drawing.Point(125, 56)
-        Me.cboAccount.Name = "cboAccount"
-        Me.cboAccount.Size = New System.Drawing.Size(245, 26)
-        Me.cboAccount.TabIndex = 3
-        '
-        'lblRequestBy
-        '
-        Me.lblRequestBy.Location = New System.Drawing.Point(12, 90)
-        Me.lblRequestBy.Name = "lblRequestBy"
-        Me.lblRequestBy.Size = New System.Drawing.Size(110, 23)
-        Me.lblRequestBy.TabIndex = 4
-        Me.lblRequestBy.Text = "Requested By"
-        Me.lblRequestBy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cboRequestBy
-        '
-        Me.cboRequestBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboRequestBy.Location = New System.Drawing.Point(125, 88)
-        Me.cboRequestBy.Name = "cboRequestBy"
-        Me.cboRequestBy.Size = New System.Drawing.Size(245, 26)
-        Me.cboRequestBy.TabIndex = 5
-        '
-        'lblAddContact
-        '
-        Me.lblAddContact.Location = New System.Drawing.Point(12, 122)
-        Me.lblAddContact.Name = "lblAddContact"
-        Me.lblAddContact.Size = New System.Drawing.Size(110, 23)
-        Me.lblAddContact.TabIndex = 6
-        Me.lblAddContact.Text = "Add'l Contact"
-        Me.lblAddContact.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cboAddContact
-        '
-        Me.cboAddContact.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboAddContact.Location = New System.Drawing.Point(125, 120)
-        Me.cboAddContact.Name = "cboAddContact"
-        Me.cboAddContact.Size = New System.Drawing.Size(245, 26)
-        Me.cboAddContact.TabIndex = 7
-        '
-        'lblCadenceID
-        '
-        Me.lblCadenceID.Location = New System.Drawing.Point(12, 154)
-        Me.lblCadenceID.Name = "lblCadenceID"
-        Me.lblCadenceID.Size = New System.Drawing.Size(110, 23)
-        Me.lblCadenceID.TabIndex = 8
-        Me.lblCadenceID.Text = "Cadence ID"
-        Me.lblCadenceID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtCadenceID
-        '
-        Me.txtCadenceID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCadenceID.Location = New System.Drawing.Point(125, 152)
-        Me.txtCadenceID.MaxLength = 15
-        Me.txtCadenceID.Name = "txtCadenceID"
-        Me.txtCadenceID.Size = New System.Drawing.Size(150, 26)
-        Me.txtCadenceID.TabIndex = 9
-        '
-        'cmdCadenceStatus
-        '
-        Me.cmdCadenceStatus.BackColor = System.Drawing.Color.FromArgb(242, 242, 242)
-        Me.cmdCadenceStatus.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.cmdCadenceStatus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdCadenceStatus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdCadenceStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdCadenceStatus.Location = New System.Drawing.Point(282, 150)
-        Me.cmdCadenceStatus.Name = "cmdCadenceStatus"
-        Me.cmdCadenceStatus.Size = New System.Drawing.Size(88, 30)
-        Me.cmdCadenceStatus.TabIndex = 10
-        Me.cmdCadenceStatus.Text = "Status"
-        Me.cmdCadenceStatus.UseVisualStyleBackColor = False
-        '
-        'lblOrderNbr
-        '
-        Me.lblOrderNbr.Location = New System.Drawing.Point(12, 186)
-        Me.lblOrderNbr.Name = "lblOrderNbr"
-        Me.lblOrderNbr.Size = New System.Drawing.Size(110, 23)
-        Me.lblOrderNbr.TabIndex = 11
-        Me.lblOrderNbr.Text = "Order Nbr"
-        Me.lblOrderNbr.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtOrderNbr
-        '
-        Me.txtOrderNbr.Location = New System.Drawing.Point(125, 184)
-        Me.txtOrderNbr.MaxLength = 25
-        Me.txtOrderNbr.Name = "txtOrderNbr"
-        Me.txtOrderNbr.Size = New System.Drawing.Size(245, 26)
-        Me.txtOrderNbr.TabIndex = 12
-        '
-        'lblPC_Nbr
-        '
-        Me.lblPC_Nbr.Location = New System.Drawing.Point(12, 218)
-        Me.lblPC_Nbr.Name = "lblPC_Nbr"
-        Me.lblPC_Nbr.Size = New System.Drawing.Size(110, 23)
-        Me.lblPC_Nbr.TabIndex = 13
-        Me.lblPC_Nbr.Text = "PC Nbr"
-        Me.lblPC_Nbr.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtPC_Nbr
-        '
-        Me.txtPC_Nbr.Location = New System.Drawing.Point(125, 216)
-        Me.txtPC_Nbr.MaxLength = 10
-        Me.txtPC_Nbr.Name = "txtPC_Nbr"
-        Me.txtPC_Nbr.Size = New System.Drawing.Size(245, 26)
-        Me.txtPC_Nbr.TabIndex = 14
-        '
-        'lblStatus
-        '
-        Me.lblStatus.Location = New System.Drawing.Point(390, 26)
-        Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(95, 23)
-        Me.lblStatus.TabIndex = 15
-        Me.lblStatus.Text = "Status"
-        Me.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cboStatus
-        '
-        Me.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboStatus.Location = New System.Drawing.Point(488, 24)
-        Me.cboStatus.Name = "cboStatus"
-        Me.cboStatus.Size = New System.Drawing.Size(230, 26)
-        Me.cboStatus.TabIndex = 16
-        '
-        'lblPriority
-        '
-        Me.lblPriority.Location = New System.Drawing.Point(390, 58)
-        Me.lblPriority.Name = "lblPriority"
-        Me.lblPriority.Size = New System.Drawing.Size(95, 23)
-        Me.lblPriority.TabIndex = 17
-        Me.lblPriority.Text = "Priority"
-        Me.lblPriority.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cboPriority
-        '
-        Me.cboPriority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboPriority.Location = New System.Drawing.Point(488, 56)
-        Me.cboPriority.Name = "cboPriority"
-        Me.cboPriority.Size = New System.Drawing.Size(230, 26)
-        Me.cboPriority.TabIndex = 18
-        '
-        'lblSoftware
-        '
-        Me.lblSoftware.Location = New System.Drawing.Point(390, 90)
-        Me.lblSoftware.Name = "lblSoftware"
-        Me.lblSoftware.Size = New System.Drawing.Size(95, 23)
-        Me.lblSoftware.TabIndex = 19
-        Me.lblSoftware.Text = "Software"
-        Me.lblSoftware.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cboSoftware
-        '
-        Me.cboSoftware.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboSoftware.Location = New System.Drawing.Point(488, 88)
-        Me.cboSoftware.Name = "cboSoftware"
-        Me.cboSoftware.Size = New System.Drawing.Size(230, 26)
-        Me.cboSoftware.TabIndex = 20
-        '
-        'lblAssignedTo
-        '
-        Me.lblAssignedTo.Location = New System.Drawing.Point(390, 122)
-        Me.lblAssignedTo.Name = "lblAssignedTo"
-        Me.lblAssignedTo.Size = New System.Drawing.Size(95, 23)
-        Me.lblAssignedTo.TabIndex = 21
-        Me.lblAssignedTo.Text = "Assigned To"
-        Me.lblAssignedTo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cboAssignedTo
-        '
-        Me.cboAssignedTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboAssignedTo.Location = New System.Drawing.Point(488, 120)
-        Me.cboAssignedTo.Name = "cboAssignedTo"
-        Me.cboAssignedTo.Size = New System.Drawing.Size(230, 26)
-        Me.cboAssignedTo.TabIndex = 22
-        '
-        'lblTier
-        '
-        Me.lblTier.Location = New System.Drawing.Point(390, 154)
-        Me.lblTier.Name = "lblTier"
-        Me.lblTier.Size = New System.Drawing.Size(95, 23)
-        Me.lblTier.TabIndex = 23
-        Me.lblTier.Text = "Tier Level"
-        Me.lblTier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cboTier
-        '
-        Me.cboTier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboTier.Location = New System.Drawing.Point(488, 152)
-        Me.cboTier.Name = "cboTier"
-        Me.cboTier.Size = New System.Drawing.Size(230, 26)
-        Me.cboTier.TabIndex = 24
-        '
-        'lblResolution
-        '
-        Me.lblResolution.Location = New System.Drawing.Point(390, 186)
-        Me.lblResolution.Name = "lblResolution"
-        Me.lblResolution.Size = New System.Drawing.Size(95, 23)
-        Me.lblResolution.TabIndex = 25
-        Me.lblResolution.Text = "Resolution"
-        Me.lblResolution.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cboResolution
-        '
-        Me.cboResolution.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboResolution.Location = New System.Drawing.Point(488, 184)
-        Me.cboResolution.Name = "cboResolution"
-        Me.cboResolution.Size = New System.Drawing.Size(230, 26)
-        Me.cboResolution.TabIndex = 26
-        '
-        'lblRequestDate
-        '
-        Me.lblRequestDate.Location = New System.Drawing.Point(735, 26)
-        Me.lblRequestDate.Name = "lblRequestDate"
-        Me.lblRequestDate.Size = New System.Drawing.Size(115, 23)
-        Me.lblRequestDate.TabIndex = 27
-        Me.lblRequestDate.Text = "Request Date"
-        Me.lblRequestDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'dtpRequestDate
-        '
-        Me.dtpRequestDate.CustomFormat = "MM/dd/yyyy  h:mm tt"
-        Me.dtpRequestDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpRequestDate.Location = New System.Drawing.Point(853, 24)
-        Me.dtpRequestDate.Name = "dtpRequestDate"
-        Me.dtpRequestDate.Size = New System.Drawing.Size(290, 26)
-        Me.dtpRequestDate.TabIndex = 28
-        '
-        'lblNeedBy
-        '
-        Me.lblNeedBy.Location = New System.Drawing.Point(735, 58)
-        Me.lblNeedBy.Name = "lblNeedBy"
-        Me.lblNeedBy.Size = New System.Drawing.Size(115, 23)
-        Me.lblNeedBy.TabIndex = 29
-        Me.lblNeedBy.Text = "Needed By Date"
-        Me.lblNeedBy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'dtpNeedBy
-        '
-        Me.dtpNeedBy.CustomFormat = "MM/dd/yyyy  h:mm tt"
-        Me.dtpNeedBy.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpNeedBy.Location = New System.Drawing.Point(853, 56)
-        Me.dtpNeedBy.Name = "dtpNeedBy"
-        Me.dtpNeedBy.ShowCheckBox = True
-        Me.dtpNeedBy.Size = New System.Drawing.Size(290, 26)
-        Me.dtpNeedBy.TabIndex = 30
-        '
-        'lblCloseDate
-        '
-        Me.lblCloseDate.Location = New System.Drawing.Point(735, 90)
-        Me.lblCloseDate.Name = "lblCloseDate"
-        Me.lblCloseDate.Size = New System.Drawing.Size(115, 23)
-        Me.lblCloseDate.TabIndex = 31
-        Me.lblCloseDate.Text = "Close Date"
-        Me.lblCloseDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtCloseDate
-        '
-        Me.txtCloseDate.Location = New System.Drawing.Point(853, 88)
-        Me.txtCloseDate.Name = "txtCloseDate"
-        Me.txtCloseDate.ReadOnly = True
-        Me.txtCloseDate.Size = New System.Drawing.Size(290, 26)
-        Me.txtCloseDate.TabIndex = 32
-        Me.txtCloseDate.TabStop = False
-        '
-        'lblAutoClose
-        '
-        Me.lblAutoClose.Location = New System.Drawing.Point(735, 122)
-        Me.lblAutoClose.Name = "lblAutoClose"
-        Me.lblAutoClose.Size = New System.Drawing.Size(115, 23)
-        Me.lblAutoClose.TabIndex = 33
-        Me.lblAutoClose.Text = "Auto Close Date"
-        Me.lblAutoClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'dtpAutoClose
-        '
-        Me.dtpAutoClose.Format = System.Windows.Forms.DateTimePickerFormat.Short
-        Me.dtpAutoClose.Location = New System.Drawing.Point(853, 120)
-        Me.dtpAutoClose.Name = "dtpAutoClose"
-        Me.dtpAutoClose.ShowCheckBox = True
-        Me.dtpAutoClose.Size = New System.Drawing.Size(290, 26)
-        Me.dtpAutoClose.TabIndex = 34
-        '
-        'lblNotes
-        '
-        Me.lblNotes.Location = New System.Drawing.Point(735, 154)
-        Me.lblNotes.Name = "lblNotes"
-        Me.lblNotes.Size = New System.Drawing.Size(115, 23)
-        Me.lblNotes.TabIndex = 35
-        Me.lblNotes.Text = "Notes"
-        Me.lblNotes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtNotes
-        '
-        Me.txtNotes.AcceptsReturn = True
-        Me.txtNotes.Location = New System.Drawing.Point(853, 152)
-        Me.txtNotes.MaxLength = 1000
-        Me.txtNotes.Multiline = True
-        Me.txtNotes.Name = "txtNotes"
-        Me.txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtNotes.Size = New System.Drawing.Size(290, 194)
-        Me.txtNotes.TabIndex = 36
-        '
-        'lblDescription
-        '
-        Me.lblDescription.Location = New System.Drawing.Point(12, 254)
-        Me.lblDescription.Name = "lblDescription"
-        Me.lblDescription.Size = New System.Drawing.Size(110, 23)
-        Me.lblDescription.TabIndex = 37
-        Me.lblDescription.Text = "Description"
-        Me.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtDescription
-        '
-        Me.txtDescription.AcceptsReturn = True
-        Me.txtDescription.Location = New System.Drawing.Point(125, 252)
-        Me.txtDescription.MaxLength = 1024
-        Me.txtDescription.Multiline = True
-        Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtDescription.Size = New System.Drawing.Size(593, 94)
-        Me.txtDescription.TabIndex = 38
-        '
-        'chkNotifyUpdates
-        '
-        Me.chkNotifyUpdates.AutoSize = True
-        Me.chkNotifyUpdates.Location = New System.Drawing.Point(14, 778)
-        Me.chkNotifyUpdates.Name = "chkNotifyUpdates"
-        Me.chkNotifyUpdates.TabIndex = 15
-        Me.chkNotifyUpdates.Text = "Notify Updates"
-        Me.chkNotifyUpdates.UseVisualStyleBackColor = True
-        '
-        'chkNotifyClose
-        '
-        Me.chkNotifyClose.AutoSize = True
-        Me.chkNotifyClose.Checked = True
-        Me.chkNotifyClose.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkNotifyClose.Location = New System.Drawing.Point(160, 778)
-        Me.chkNotifyClose.Name = "chkNotifyClose"
-        Me.chkNotifyClose.TabIndex = 16
-        Me.chkNotifyClose.Text = "Notify Close"
-        Me.chkNotifyClose.UseVisualStyleBackColor = True
-        '
-        'cmdQuickPrint
-        '
-        Me.cmdQuickPrint.BackColor = System.Drawing.Color.FromArgb(242, 242, 242)
-        Me.cmdQuickPrint.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.cmdQuickPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdQuickPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdQuickPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdQuickPrint.Font = New System.Drawing.Font("Calibri", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdQuickPrint.Location = New System.Drawing.Point(408, 768)
-        Me.cmdQuickPrint.Name = "cmdQuickPrint"
-        Me.cmdQuickPrint.Size = New System.Drawing.Size(144, 40)
-        Me.cmdQuickPrint.TabIndex = 21
-        Me.cmdQuickPrint.Text = "Quick Print"
-        Me.cmdQuickPrint.UseVisualStyleBackColor = False
-        '
-        'cmdUpdateTicket
-        '
-        Me.cmdUpdateTicket.BackColor = System.Drawing.Color.FromArgb(242, 242, 242)
-        Me.cmdUpdateTicket.Enabled = False
-        Me.cmdUpdateTicket.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.cmdUpdateTicket.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdUpdateTicket.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdUpdateTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdUpdateTicket.Font = New System.Drawing.Font("Calibri", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdUpdateTicket.Location = New System.Drawing.Point(560, 768)
-        Me.cmdUpdateTicket.Name = "cmdUpdateTicket"
-        Me.cmdUpdateTicket.Size = New System.Drawing.Size(144, 40)
-        Me.cmdUpdateTicket.TabIndex = 17
-        Me.cmdUpdateTicket.Text = "Update Ticket"
-        Me.cmdUpdateTicket.UseVisualStyleBackColor = False
-        '
-        'cmdCloseTicket
-        '
-        Me.cmdCloseTicket.BackColor = System.Drawing.Color.FromArgb(242, 242, 242)
-        Me.cmdCloseTicket.Enabled = False
-        Me.cmdCloseTicket.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.cmdCloseTicket.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(250, 140, 60)
-        Me.cmdCloseTicket.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(250, 140, 60)
-        Me.cmdCloseTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdCloseTicket.Font = New System.Drawing.Font("Calibri", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdCloseTicket.Location = New System.Drawing.Point(712, 768)
-        Me.cmdCloseTicket.Name = "cmdCloseTicket"
-        Me.cmdCloseTicket.Size = New System.Drawing.Size(144, 40)
-        Me.cmdCloseTicket.TabIndex = 18
-        Me.cmdCloseTicket.Text = "Close Ticket"
-        Me.cmdCloseTicket.UseVisualStyleBackColor = False
-        '
-        'cmdReset
-        '
-        Me.cmdReset.BackColor = System.Drawing.Color.FromArgb(242, 242, 242)
-        Me.cmdReset.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.cmdReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdReset.Font = New System.Drawing.Font("Calibri", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdReset.Location = New System.Drawing.Point(864, 768)
-        Me.cmdReset.Name = "cmdReset"
-        Me.cmdReset.Size = New System.Drawing.Size(144, 40)
-        Me.cmdReset.TabIndex = 19
-        Me.cmdReset.Text = "Reset"
-        Me.cmdReset.UseVisualStyleBackColor = False
-        '
-        'cmdClose
-        '
-        Me.cmdClose.BackColor = System.Drawing.Color.FromArgb(242, 242, 242)
-        Me.cmdClose.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.cmdClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(189, 215, 238)
-        Me.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdClose.Font = New System.Drawing.Font("Calibri", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdClose.Location = New System.Drawing.Point(1016, 768)
-        Me.cmdClose.Name = "cmdClose"
-        Me.cmdClose.Size = New System.Drawing.Size(144, 40)
-        Me.cmdClose.TabIndex = 20
-        Me.cmdClose.Text = "Close"
-        Me.cmdClose.UseVisualStyleBackColor = False
-        '
-        'TicketEditForm
-        '
-        Me.AcceptButton = Me.cmdSearch
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1180, 820)
-        Me.Controls.Add(Me.grpStatus)
-        Me.Controls.Add(Me.grpAssigned)
-        Me.Controls.Add(Me.lblQuickFind)
-        Me.Controls.Add(Me.txtQuickFind)
-        Me.Controls.Add(Me.cmdSearch)
-        Me.Controls.Add(Me.lblCount)
-        Me.Controls.Add(Me.lblFilterAccount)
-        Me.Controls.Add(Me.cboFilterAccount)
-        Me.Controls.Add(Me.lblFilterUser)
-        Me.Controls.Add(Me.cboFilterUser)
-        Me.Controls.Add(Me.lblFilterPriority)
-        Me.Controls.Add(Me.cboFilterPriority)
-        Me.Controls.Add(Me.cmdClearFilter)
-        Me.Controls.Add(Me.dgvTickets)
-        Me.Controls.Add(Me.grpTicket)
-        Me.Controls.Add(Me.chkNotifyUpdates)
-        Me.Controls.Add(Me.chkNotifyClose)
-        Me.Controls.Add(Me.cmdQuickPrint)
-        Me.Controls.Add(Me.cmdUpdateTicket)
-        Me.Controls.Add(Me.cmdCloseTicket)
-        Me.Controls.Add(Me.cmdReset)
-        Me.Controls.Add(Me.cmdClose)
-        Me.Font = New System.Drawing.Font("Calibri", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "TicketEditForm"
-        Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Edit Help Desk Tickets"
-        Me.grpStatus.ResumeLayout(False)
-        Me.grpStatus.PerformLayout()
-        Me.grpAssigned.ResumeLayout(False)
-        Me.grpAssigned.PerformLayout()
-        CType(Me.dgvTickets, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.grpTicket.ResumeLayout(False)
-        Me.grpTicket.PerformLayout()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        grpStatus = New GroupBox()
+        optOpen = New RadioButton()
+        optClosed = New RadioButton()
+        optAll = New RadioButton()
+        grpAssigned = New GroupBox()
+        optAnyAssigned = New RadioButton()
+        optAssigned = New RadioButton()
+        optNotAssigned = New RadioButton()
+        lblQuickFind = New Label()
+        txtQuickFind = New TextBox()
+        cmdSearch = New Button()
+        lblCount = New Label()
+        lblFilterAccount = New Label()
+        cboFilterAccount = New BorderedComboBox()
+        lblFilterUser = New Label()
+        cboFilterUser = New BorderedComboBox()
+        lblFilterPriority = New Label()
+        cboFilterPriority = New BorderedComboBox()
+        cmdClearFilter = New Button()
+        dgvTickets = New DataGridView()
+        grpTicket = New GroupBox()
+        lblTicketNo = New Label()
+        txtTicketNo = New TextBox()
+        lblAccount = New Label()
+        cboAccount = New BorderedComboBox()
+        lblRequestBy = New Label()
+        cboRequestBy = New BorderedComboBox()
+        lblAddContact = New Label()
+        cboAddContact = New BorderedComboBox()
+        lblCadenceID = New Label()
+        txtCadenceID = New TextBox()
+        cmdCadenceStatus = New Button()
+        lblOrderNbr = New Label()
+        txtOrderNbr = New TextBox()
+        lblPC_Nbr = New Label()
+        txtPC_Nbr = New TextBox()
+        lblStatus = New Label()
+        cboStatus = New BorderedComboBox()
+        lblPriority = New Label()
+        cboPriority = New BorderedComboBox()
+        lblSoftware = New Label()
+        cboSoftware = New BorderedComboBox()
+        lblAssignedTo = New Label()
+        cboAssignedTo = New BorderedComboBox()
+        lblTier = New Label()
+        cboTier = New BorderedComboBox()
+        lblResolution = New Label()
+        cboResolution = New BorderedComboBox()
+        lblRequestDate = New Label()
+        dtpRequestDate = New DateTimePicker()
+        lblNeedBy = New Label()
+        dtpNeedBy = New DateTimePicker()
+        lblCloseDate = New Label()
+        txtCloseDate = New TextBox()
+        lblAutoClose = New Label()
+        dtpAutoClose = New DateTimePicker()
+        lblNotes = New Label()
+        txtNotes = New TextBox()
+        lblDescription = New Label()
+        txtDescription = New TextBox()
+        chkNotifyUpdates = New CheckBox()
+        chkNotifyClose = New CheckBox()
+        cmdQuickPrint = New Button()
+        cmdUpdateTicket = New Button()
+        cmdCloseTicket = New Button()
+        cmdReset = New Button()
+        cmdClose = New Button()
+        lblAttachment = New Label()
+        cmdOpenAttachment = New Button()
+        grpStatus.SuspendLayout()
+        grpAssigned.SuspendLayout()
+        CType(dgvTickets, ComponentModel.ISupportInitialize).BeginInit()
+        grpTicket.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' grpStatus
+        ' 
+        grpStatus.Controls.Add(optOpen)
+        grpStatus.Controls.Add(optClosed)
+        grpStatus.Controls.Add(optAll)
+        grpStatus.Location = New Point(12, 6)
+        grpStatus.Name = "grpStatus"
+        grpStatus.Size = New Size(250, 54)
+        grpStatus.TabIndex = 0
+        grpStatus.TabStop = False
+        grpStatus.Text = "Status"
+        ' 
+        ' optOpen
+        ' 
+        optOpen.AutoSize = True
+        optOpen.Checked = True
+        optOpen.Location = New Point(12, 22)
+        optOpen.Name = "optOpen"
+        optOpen.Size = New Size(60, 22)
+        optOpen.TabIndex = 0
+        optOpen.TabStop = True
+        optOpen.Text = "Open"
+        optOpen.UseVisualStyleBackColor = True
+        ' 
+        ' optClosed
+        ' 
+        optClosed.AutoSize = True
+        optClosed.Location = New Point(90, 22)
+        optClosed.Name = "optClosed"
+        optClosed.Size = New Size(68, 22)
+        optClosed.TabIndex = 1
+        optClosed.Text = "Closed"
+        optClosed.UseVisualStyleBackColor = True
+        ' 
+        ' optAll
+        ' 
+        optAll.AutoSize = True
+        optAll.Location = New Point(175, 22)
+        optAll.Name = "optAll"
+        optAll.Size = New Size(43, 22)
+        optAll.TabIndex = 2
+        optAll.Text = "All"
+        optAll.UseVisualStyleBackColor = True
+        ' 
+        ' grpAssigned
+        ' 
+        grpAssigned.Controls.Add(optAnyAssigned)
+        grpAssigned.Controls.Add(optAssigned)
+        grpAssigned.Controls.Add(optNotAssigned)
+        grpAssigned.Location = New Point(272, 6)
+        grpAssigned.Name = "grpAssigned"
+        grpAssigned.Size = New Size(330, 54)
+        grpAssigned.TabIndex = 1
+        grpAssigned.TabStop = False
+        grpAssigned.Text = "Assignment"
+        ' 
+        ' optAnyAssigned
+        ' 
+        optAnyAssigned.AutoSize = True
+        optAnyAssigned.Checked = True
+        optAnyAssigned.Location = New Point(12, 22)
+        optAnyAssigned.Name = "optAnyAssigned"
+        optAnyAssigned.Size = New Size(50, 22)
+        optAnyAssigned.TabIndex = 0
+        optAnyAssigned.TabStop = True
+        optAnyAssigned.Text = "Any"
+        optAnyAssigned.UseVisualStyleBackColor = True
+        ' 
+        ' optAssigned
+        ' 
+        optAssigned.AutoSize = True
+        optAssigned.Location = New Point(80, 22)
+        optAssigned.Name = "optAssigned"
+        optAssigned.Size = New Size(82, 22)
+        optAssigned.TabIndex = 1
+        optAssigned.Text = "Assigned"
+        optAssigned.UseVisualStyleBackColor = True
+        ' 
+        ' optNotAssigned
+        ' 
+        optNotAssigned.AutoSize = True
+        optNotAssigned.Location = New Point(185, 22)
+        optNotAssigned.Name = "optNotAssigned"
+        optNotAssigned.Size = New Size(108, 22)
+        optNotAssigned.TabIndex = 2
+        optNotAssigned.Text = "Not Assigned"
+        optNotAssigned.UseVisualStyleBackColor = True
+        ' 
+        ' lblQuickFind
+        ' 
+        lblQuickFind.Location = New Point(620, 24)
+        lblQuickFind.Name = "lblQuickFind"
+        lblQuickFind.Size = New Size(70, 23)
+        lblQuickFind.TabIndex = 2
+        lblQuickFind.Text = "Ticket No"
+        lblQuickFind.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' txtQuickFind
+        ' 
+        txtQuickFind.Location = New Point(695, 22)
+        txtQuickFind.MaxLength = 10
+        txtQuickFind.Name = "txtQuickFind"
+        txtQuickFind.Size = New Size(90, 25)
+        txtQuickFind.TabIndex = 3
+        ' 
+        ' cmdSearch
+        ' 
+        cmdSearch.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
+        cmdSearch.FlatAppearance.BorderColor = Color.Black
+        cmdSearch.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdSearch.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdSearch.FlatStyle = FlatStyle.Flat
+        cmdSearch.Font = New Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cmdSearch.Location = New Point(795, 17)
+        cmdSearch.Name = "cmdSearch"
+        cmdSearch.Size = New Size(110, 36)
+        cmdSearch.TabIndex = 4
+        cmdSearch.Text = "Search"
+        cmdSearch.UseVisualStyleBackColor = False
+        ' 
+        ' lblCount
+        ' 
+        lblCount.Font = New Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCount.Location = New Point(920, 24)
+        lblCount.Name = "lblCount"
+        lblCount.Size = New Size(248, 23)
+        lblCount.TabIndex = 5
+        lblCount.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' lblFilterAccount
+        ' 
+        lblFilterAccount.Location = New Point(12, 68)
+        lblFilterAccount.Name = "lblFilterAccount"
+        lblFilterAccount.Size = New Size(65, 23)
+        lblFilterAccount.TabIndex = 6
+        lblFilterAccount.Text = "Account"
+        lblFilterAccount.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' cboFilterAccount
+        ' 
+        cboFilterAccount.DropDownStyle = ComboBoxStyle.DropDownList
+        cboFilterAccount.Location = New Point(80, 66)
+        cboFilterAccount.Name = "cboFilterAccount"
+        cboFilterAccount.Size = New Size(270, 26)
+        cboFilterAccount.TabIndex = 7
+        ' 
+        ' lblFilterUser
+        ' 
+        lblFilterUser.Location = New Point(365, 68)
+        lblFilterUser.Name = "lblFilterUser"
+        lblFilterUser.Size = New Size(95, 23)
+        lblFilterUser.TabIndex = 8
+        lblFilterUser.Text = "Requested By"
+        lblFilterUser.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' cboFilterUser
+        ' 
+        cboFilterUser.DropDownStyle = ComboBoxStyle.DropDownList
+        cboFilterUser.Location = New Point(462, 66)
+        cboFilterUser.Name = "cboFilterUser"
+        cboFilterUser.Size = New Size(200, 26)
+        cboFilterUser.TabIndex = 9
+        ' 
+        ' lblFilterPriority
+        ' 
+        lblFilterPriority.Location = New Point(677, 68)
+        lblFilterPriority.Name = "lblFilterPriority"
+        lblFilterPriority.Size = New Size(55, 23)
+        lblFilterPriority.TabIndex = 10
+        lblFilterPriority.Text = "Priority"
+        lblFilterPriority.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' cboFilterPriority
+        ' 
+        cboFilterPriority.DropDownStyle = ComboBoxStyle.DropDownList
+        cboFilterPriority.Location = New Point(735, 66)
+        cboFilterPriority.Name = "cboFilterPriority"
+        cboFilterPriority.Size = New Size(170, 26)
+        cboFilterPriority.TabIndex = 11
+        ' 
+        ' cmdClearFilter
+        ' 
+        cmdClearFilter.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
+        cmdClearFilter.FlatAppearance.BorderColor = Color.Black
+        cmdClearFilter.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdClearFilter.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdClearFilter.FlatStyle = FlatStyle.Flat
+        cmdClearFilter.Font = New Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cmdClearFilter.Location = New Point(920, 61)
+        cmdClearFilter.Name = "cmdClearFilter"
+        cmdClearFilter.Size = New Size(130, 36)
+        cmdClearFilter.TabIndex = 12
+        cmdClearFilter.Text = "Clear Filters"
+        cmdClearFilter.UseVisualStyleBackColor = False
+        ' 
+        ' dgvTickets
+        ' 
+        dgvTickets.AllowUserToAddRows = False
+        dgvTickets.AllowUserToDeleteRows = False
+        dgvTickets.AllowUserToResizeRows = False
+        dgvTickets.BackgroundColor = Color.White
+        dgvTickets.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvTickets.Location = New Point(12, 104)
+        dgvTickets.MultiSelect = False
+        dgvTickets.Name = "dgvTickets"
+        dgvTickets.ReadOnly = True
+        dgvTickets.RowHeadersVisible = False
+        dgvTickets.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvTickets.Size = New Size(1156, 290)
+        dgvTickets.TabIndex = 13
+        ' 
+        ' grpTicket
+        ' 
+        grpTicket.Controls.Add(lblTicketNo)
+        grpTicket.Controls.Add(txtTicketNo)
+        grpTicket.Controls.Add(lblAccount)
+        grpTicket.Controls.Add(cboAccount)
+        grpTicket.Controls.Add(lblRequestBy)
+        grpTicket.Controls.Add(cboRequestBy)
+        grpTicket.Controls.Add(lblAddContact)
+        grpTicket.Controls.Add(cboAddContact)
+        grpTicket.Controls.Add(lblCadenceID)
+        grpTicket.Controls.Add(txtCadenceID)
+        grpTicket.Controls.Add(cmdCadenceStatus)
+        grpTicket.Controls.Add(lblOrderNbr)
+        grpTicket.Controls.Add(txtOrderNbr)
+        grpTicket.Controls.Add(lblPC_Nbr)
+        grpTicket.Controls.Add(txtPC_Nbr)
+        grpTicket.Controls.Add(lblStatus)
+        grpTicket.Controls.Add(cboStatus)
+        grpTicket.Controls.Add(lblPriority)
+        grpTicket.Controls.Add(cboPriority)
+        grpTicket.Controls.Add(lblSoftware)
+        grpTicket.Controls.Add(cboSoftware)
+        grpTicket.Controls.Add(lblAssignedTo)
+        grpTicket.Controls.Add(cboAssignedTo)
+        grpTicket.Controls.Add(lblTier)
+        grpTicket.Controls.Add(cboTier)
+        grpTicket.Controls.Add(lblResolution)
+        grpTicket.Controls.Add(cboResolution)
+        grpTicket.Controls.Add(lblRequestDate)
+        grpTicket.Controls.Add(dtpRequestDate)
+        grpTicket.Controls.Add(lblNeedBy)
+        grpTicket.Controls.Add(dtpNeedBy)
+        grpTicket.Controls.Add(lblCloseDate)
+        grpTicket.Controls.Add(txtCloseDate)
+        grpTicket.Controls.Add(lblAutoClose)
+        grpTicket.Controls.Add(dtpAutoClose)
+        grpTicket.Controls.Add(lblNotes)
+        grpTicket.Controls.Add(txtNotes)
+        grpTicket.Controls.Add(lblDescription)
+        grpTicket.Controls.Add(txtDescription)
+        grpTicket.Controls.Add(lblAttachment)
+        grpTicket.Controls.Add(cmdOpenAttachment)
+        grpTicket.Enabled = False
+        grpTicket.Location = New Point(12, 402)
+        grpTicket.Name = "grpTicket"
+        grpTicket.Size = New Size(1156, 356)
+        grpTicket.TabIndex = 14
+        grpTicket.TabStop = False
+        grpTicket.Text = "Ticket (double-click a ticket above to open it)"
+        ' 
+        ' lblTicketNo
+        ' 
+        lblTicketNo.Location = New Point(12, 26)
+        lblTicketNo.Name = "lblTicketNo"
+        lblTicketNo.Size = New Size(110, 23)
+        lblTicketNo.TabIndex = 0
+        lblTicketNo.Text = "Current Ticket"
+        lblTicketNo.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' txtTicketNo
+        ' 
+        txtTicketNo.BorderStyle = BorderStyle.FixedSingle
+        txtTicketNo.Font = New Font("Microsoft Sans Serif", 9.75F)
+        txtTicketNo.Location = New Point(125, 24)
+        txtTicketNo.Name = "txtTicketNo"
+        txtTicketNo.ReadOnly = True
+        txtTicketNo.Size = New Size(100, 22)
+        txtTicketNo.TabIndex = 1
+        txtTicketNo.TabStop = False
+        ' 
+        ' lblAccount
+        ' 
+        lblAccount.Location = New Point(12, 58)
+        lblAccount.Name = "lblAccount"
+        lblAccount.Size = New Size(110, 23)
+        lblAccount.TabIndex = 2
+        lblAccount.Text = "Account No"
+        lblAccount.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' cboAccount
+        ' 
+        cboAccount.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+        cboAccount.AutoCompleteSource = AutoCompleteSource.ListItems
+        cboAccount.Font = New Font("Microsoft Sans Serif", 9.75F)
+        cboAccount.Location = New Point(125, 56)
+        cboAccount.Name = "cboAccount"
+        cboAccount.Size = New Size(245, 24)
+        cboAccount.TabIndex = 3
+        ' 
+        ' lblRequestBy
+        ' 
+        lblRequestBy.Location = New Point(12, 90)
+        lblRequestBy.Name = "lblRequestBy"
+        lblRequestBy.Size = New Size(110, 23)
+        lblRequestBy.TabIndex = 4
+        lblRequestBy.Text = "Requested By"
+        lblRequestBy.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' cboRequestBy
+        ' 
+        cboRequestBy.DropDownStyle = ComboBoxStyle.DropDownList
+        cboRequestBy.Font = New Font("Microsoft Sans Serif", 9.75F)
+        cboRequestBy.Location = New Point(125, 88)
+        cboRequestBy.Name = "cboRequestBy"
+        cboRequestBy.Size = New Size(245, 24)
+        cboRequestBy.TabIndex = 5
+        ' 
+        ' lblAddContact
+        ' 
+        lblAddContact.Location = New Point(12, 122)
+        lblAddContact.Name = "lblAddContact"
+        lblAddContact.Size = New Size(110, 23)
+        lblAddContact.TabIndex = 6
+        lblAddContact.Text = "Add'l Contact"
+        lblAddContact.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' cboAddContact
+        ' 
+        cboAddContact.DropDownStyle = ComboBoxStyle.DropDownList
+        cboAddContact.Font = New Font("Microsoft Sans Serif", 9.75F)
+        cboAddContact.Location = New Point(125, 120)
+        cboAddContact.Name = "cboAddContact"
+        cboAddContact.Size = New Size(245, 24)
+        cboAddContact.TabIndex = 7
+        ' 
+        ' lblCadenceID
+        ' 
+        lblCadenceID.Location = New Point(12, 154)
+        lblCadenceID.Name = "lblCadenceID"
+        lblCadenceID.Size = New Size(110, 23)
+        lblCadenceID.TabIndex = 8
+        lblCadenceID.Text = "Cadence ID"
+        lblCadenceID.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' txtCadenceID
+        ' 
+        txtCadenceID.CharacterCasing = CharacterCasing.Upper
+        txtCadenceID.Font = New Font("Microsoft Sans Serif", 9.75F)
+        txtCadenceID.Location = New Point(125, 152)
+        txtCadenceID.MaxLength = 15
+        txtCadenceID.Name = "txtCadenceID"
+        txtCadenceID.Size = New Size(150, 22)
+        txtCadenceID.TabIndex = 9
+        ' 
+        ' cmdCadenceStatus
+        ' 
+        cmdCadenceStatus.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
+        cmdCadenceStatus.FlatAppearance.BorderColor = Color.Black
+        cmdCadenceStatus.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdCadenceStatus.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdCadenceStatus.FlatStyle = FlatStyle.Flat
+        cmdCadenceStatus.Location = New Point(282, 150)
+        cmdCadenceStatus.Name = "cmdCadenceStatus"
+        cmdCadenceStatus.Size = New Size(88, 30)
+        cmdCadenceStatus.TabIndex = 10
+        cmdCadenceStatus.Text = "Status"
+        cmdCadenceStatus.UseVisualStyleBackColor = False
+        ' 
+        ' lblOrderNbr
+        ' 
+        lblOrderNbr.Location = New Point(12, 186)
+        lblOrderNbr.Name = "lblOrderNbr"
+        lblOrderNbr.Size = New Size(110, 23)
+        lblOrderNbr.TabIndex = 11
+        lblOrderNbr.Text = "Order Nbr"
+        lblOrderNbr.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' txtOrderNbr
+        ' 
+        txtOrderNbr.Location = New Point(125, 184)
+        txtOrderNbr.MaxLength = 25
+        txtOrderNbr.Name = "txtOrderNbr"
+        txtOrderNbr.Size = New Size(245, 25)
+        txtOrderNbr.TabIndex = 12
+        ' 
+        ' lblPC_Nbr
+        ' 
+        lblPC_Nbr.Location = New Point(12, 218)
+        lblPC_Nbr.Name = "lblPC_Nbr"
+        lblPC_Nbr.Size = New Size(110, 23)
+        lblPC_Nbr.TabIndex = 13
+        lblPC_Nbr.Text = "PC Nbr"
+        lblPC_Nbr.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' txtPC_Nbr
+        ' 
+        txtPC_Nbr.Location = New Point(125, 216)
+        txtPC_Nbr.MaxLength = 10
+        txtPC_Nbr.Name = "txtPC_Nbr"
+        txtPC_Nbr.Size = New Size(245, 25)
+        txtPC_Nbr.TabIndex = 14
+        ' 
+        ' lblAttachment
+        ' 
+        lblAttachment.Location = New Point(390, 218)
+        lblAttachment.Name = "lblAttachment"
+        lblAttachment.Size = New Size(95, 23)
+        lblAttachment.TabIndex = 39
+        lblAttachment.Text = "Attachment"
+        lblAttachment.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' cmdOpenAttachment
+        ' 
+        cmdOpenAttachment.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
+        cmdOpenAttachment.Enabled = False
+        cmdOpenAttachment.FlatAppearance.BorderColor = Color.Black
+        cmdOpenAttachment.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdOpenAttachment.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdOpenAttachment.FlatStyle = FlatStyle.Flat
+        cmdOpenAttachment.Location = New Point(488, 214)
+        cmdOpenAttachment.Name = "cmdOpenAttachment"
+        cmdOpenAttachment.Size = New Size(230, 30)
+        cmdOpenAttachment.TabIndex = 40
+        cmdOpenAttachment.Text = "Open Attachment"
+        cmdOpenAttachment.UseVisualStyleBackColor = False
+        ' 
+        ' lblStatus
+        ' 
+        lblStatus.Location = New Point(390, 26)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(95, 23)
+        lblStatus.TabIndex = 15
+        lblStatus.Text = "Status"
+        lblStatus.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' cboStatus
+        ' 
+        cboStatus.DropDownStyle = ComboBoxStyle.DropDownList
+        cboStatus.Location = New Point(488, 24)
+        cboStatus.Name = "cboStatus"
+        cboStatus.Size = New Size(230, 26)
+        cboStatus.TabIndex = 16
+        ' 
+        ' lblPriority
+        ' 
+        lblPriority.Location = New Point(390, 58)
+        lblPriority.Name = "lblPriority"
+        lblPriority.Size = New Size(95, 23)
+        lblPriority.TabIndex = 17
+        lblPriority.Text = "Priority"
+        lblPriority.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' cboPriority
+        ' 
+        cboPriority.DropDownStyle = ComboBoxStyle.DropDownList
+        cboPriority.Location = New Point(488, 56)
+        cboPriority.Name = "cboPriority"
+        cboPriority.Size = New Size(230, 26)
+        cboPriority.TabIndex = 18
+        ' 
+        ' lblSoftware
+        ' 
+        lblSoftware.Location = New Point(390, 90)
+        lblSoftware.Name = "lblSoftware"
+        lblSoftware.Size = New Size(95, 23)
+        lblSoftware.TabIndex = 19
+        lblSoftware.Text = "Software"
+        lblSoftware.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' cboSoftware
+        ' 
+        cboSoftware.DropDownStyle = ComboBoxStyle.DropDownList
+        cboSoftware.Location = New Point(488, 88)
+        cboSoftware.Name = "cboSoftware"
+        cboSoftware.Size = New Size(230, 26)
+        cboSoftware.TabIndex = 20
+        ' 
+        ' lblAssignedTo
+        ' 
+        lblAssignedTo.Location = New Point(390, 122)
+        lblAssignedTo.Name = "lblAssignedTo"
+        lblAssignedTo.Size = New Size(95, 23)
+        lblAssignedTo.TabIndex = 21
+        lblAssignedTo.Text = "Assigned To"
+        lblAssignedTo.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' cboAssignedTo
+        ' 
+        cboAssignedTo.DropDownStyle = ComboBoxStyle.DropDownList
+        cboAssignedTo.Location = New Point(488, 120)
+        cboAssignedTo.Name = "cboAssignedTo"
+        cboAssignedTo.Size = New Size(230, 26)
+        cboAssignedTo.TabIndex = 22
+        ' 
+        ' lblTier
+        ' 
+        lblTier.Location = New Point(390, 154)
+        lblTier.Name = "lblTier"
+        lblTier.Size = New Size(95, 23)
+        lblTier.TabIndex = 23
+        lblTier.Text = "Tier Level"
+        lblTier.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' cboTier
+        ' 
+        cboTier.DropDownStyle = ComboBoxStyle.DropDownList
+        cboTier.Location = New Point(488, 152)
+        cboTier.Name = "cboTier"
+        cboTier.Size = New Size(230, 26)
+        cboTier.TabIndex = 24
+        ' 
+        ' lblResolution
+        ' 
+        lblResolution.Location = New Point(390, 186)
+        lblResolution.Name = "lblResolution"
+        lblResolution.Size = New Size(95, 23)
+        lblResolution.TabIndex = 25
+        lblResolution.Text = "Resolution"
+        lblResolution.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' cboResolution
+        ' 
+        cboResolution.DropDownStyle = ComboBoxStyle.DropDownList
+        cboResolution.Location = New Point(488, 184)
+        cboResolution.Name = "cboResolution"
+        cboResolution.Size = New Size(230, 26)
+        cboResolution.TabIndex = 26
+        ' 
+        ' lblRequestDate
+        ' 
+        lblRequestDate.Location = New Point(735, 26)
+        lblRequestDate.Name = "lblRequestDate"
+        lblRequestDate.Size = New Size(115, 23)
+        lblRequestDate.TabIndex = 27
+        lblRequestDate.Text = "Request Date"
+        lblRequestDate.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' dtpRequestDate
+        ' 
+        dtpRequestDate.CustomFormat = "MM/dd/yyyy  h:mm tt"
+        dtpRequestDate.Format = DateTimePickerFormat.Custom
+        dtpRequestDate.Location = New Point(853, 24)
+        dtpRequestDate.Name = "dtpRequestDate"
+        dtpRequestDate.Size = New Size(290, 25)
+        dtpRequestDate.TabIndex = 28
+        ' 
+        ' lblNeedBy
+        ' 
+        lblNeedBy.Location = New Point(735, 58)
+        lblNeedBy.Name = "lblNeedBy"
+        lblNeedBy.Size = New Size(115, 23)
+        lblNeedBy.TabIndex = 29
+        lblNeedBy.Text = "Needed By Date"
+        lblNeedBy.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' dtpNeedBy
+        ' 
+        dtpNeedBy.CustomFormat = "MM/dd/yyyy  h:mm tt"
+        dtpNeedBy.Format = DateTimePickerFormat.Custom
+        dtpNeedBy.Location = New Point(853, 56)
+        dtpNeedBy.Name = "dtpNeedBy"
+        dtpNeedBy.ShowCheckBox = True
+        dtpNeedBy.Size = New Size(290, 25)
+        dtpNeedBy.TabIndex = 30
+        ' 
+        ' lblCloseDate
+        ' 
+        lblCloseDate.Location = New Point(735, 90)
+        lblCloseDate.Name = "lblCloseDate"
+        lblCloseDate.Size = New Size(115, 23)
+        lblCloseDate.TabIndex = 31
+        lblCloseDate.Text = "Close Date"
+        lblCloseDate.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' txtCloseDate
+        ' 
+        txtCloseDate.Location = New Point(853, 88)
+        txtCloseDate.Name = "txtCloseDate"
+        txtCloseDate.ReadOnly = True
+        txtCloseDate.Size = New Size(290, 25)
+        txtCloseDate.TabIndex = 32
+        txtCloseDate.TabStop = False
+        ' 
+        ' lblAutoClose
+        ' 
+        lblAutoClose.Location = New Point(735, 122)
+        lblAutoClose.Name = "lblAutoClose"
+        lblAutoClose.Size = New Size(115, 23)
+        lblAutoClose.TabIndex = 33
+        lblAutoClose.Text = "Auto Close Date"
+        lblAutoClose.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' dtpAutoClose
+        ' 
+        dtpAutoClose.Format = DateTimePickerFormat.Short
+        dtpAutoClose.Location = New Point(853, 120)
+        dtpAutoClose.Name = "dtpAutoClose"
+        dtpAutoClose.ShowCheckBox = True
+        dtpAutoClose.Size = New Size(290, 25)
+        dtpAutoClose.TabIndex = 34
+        ' 
+        ' lblNotes
+        ' 
+        lblNotes.Location = New Point(735, 154)
+        lblNotes.Name = "lblNotes"
+        lblNotes.Size = New Size(115, 23)
+        lblNotes.TabIndex = 35
+        lblNotes.Text = "Notes"
+        lblNotes.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' txtNotes
+        ' 
+        txtNotes.AcceptsReturn = True
+        txtNotes.Location = New Point(853, 152)
+        txtNotes.MaxLength = 1000
+        txtNotes.Multiline = True
+        txtNotes.Name = "txtNotes"
+        txtNotes.ScrollBars = ScrollBars.Vertical
+        txtNotes.Size = New Size(290, 194)
+        txtNotes.TabIndex = 36
+        ' 
+        ' lblDescription
+        ' 
+        lblDescription.Location = New Point(12, 254)
+        lblDescription.Name = "lblDescription"
+        lblDescription.Size = New Size(110, 23)
+        lblDescription.TabIndex = 37
+        lblDescription.Text = "Description"
+        lblDescription.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' txtDescription
+        ' 
+        txtDescription.AcceptsReturn = True
+        txtDescription.Location = New Point(125, 252)
+        txtDescription.MaxLength = 1024
+        txtDescription.Multiline = True
+        txtDescription.Name = "txtDescription"
+        txtDescription.ScrollBars = ScrollBars.Vertical
+        txtDescription.Size = New Size(593, 94)
+        txtDescription.TabIndex = 38
+        ' 
+        ' chkNotifyUpdates
+        ' 
+        chkNotifyUpdates.AutoSize = True
+        chkNotifyUpdates.Location = New Point(14, 778)
+        chkNotifyUpdates.Name = "chkNotifyUpdates"
+        chkNotifyUpdates.Size = New Size(119, 22)
+        chkNotifyUpdates.TabIndex = 15
+        chkNotifyUpdates.Text = "Notify Updates"
+        chkNotifyUpdates.UseVisualStyleBackColor = True
+        ' 
+        ' chkNotifyClose
+        ' 
+        chkNotifyClose.AutoSize = True
+        chkNotifyClose.Checked = True
+        chkNotifyClose.CheckState = CheckState.Checked
+        chkNotifyClose.Location = New Point(160, 778)
+        chkNotifyClose.Name = "chkNotifyClose"
+        chkNotifyClose.Size = New Size(102, 22)
+        chkNotifyClose.TabIndex = 16
+        chkNotifyClose.Text = "Notify Close"
+        chkNotifyClose.UseVisualStyleBackColor = True
+        ' 
+        ' cmdQuickPrint
+        ' 
+        cmdQuickPrint.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
+        cmdQuickPrint.FlatAppearance.BorderColor = Color.Black
+        cmdQuickPrint.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdQuickPrint.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdQuickPrint.FlatStyle = FlatStyle.Flat
+        cmdQuickPrint.Font = New Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cmdQuickPrint.Location = New Point(408, 768)
+        cmdQuickPrint.Name = "cmdQuickPrint"
+        cmdQuickPrint.Size = New Size(144, 40)
+        cmdQuickPrint.TabIndex = 21
+        cmdQuickPrint.Text = "Quick Print"
+        cmdQuickPrint.UseVisualStyleBackColor = False
+        ' 
+        ' cmdUpdateTicket
+        ' 
+        cmdUpdateTicket.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
+        cmdUpdateTicket.Enabled = False
+        cmdUpdateTicket.FlatAppearance.BorderColor = Color.Black
+        cmdUpdateTicket.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdUpdateTicket.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdUpdateTicket.FlatStyle = FlatStyle.Flat
+        cmdUpdateTicket.Font = New Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cmdUpdateTicket.Location = New Point(560, 768)
+        cmdUpdateTicket.Name = "cmdUpdateTicket"
+        cmdUpdateTicket.Size = New Size(144, 40)
+        cmdUpdateTicket.TabIndex = 17
+        cmdUpdateTicket.Text = "Update Ticket"
+        cmdUpdateTicket.UseVisualStyleBackColor = False
+        ' 
+        ' cmdCloseTicket
+        ' 
+        cmdCloseTicket.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
+        cmdCloseTicket.Enabled = False
+        cmdCloseTicket.FlatAppearance.BorderColor = Color.Black
+        cmdCloseTicket.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(250), CByte(140), CByte(60))
+        cmdCloseTicket.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(250), CByte(140), CByte(60))
+        cmdCloseTicket.FlatStyle = FlatStyle.Flat
+        cmdCloseTicket.Font = New Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cmdCloseTicket.Location = New Point(712, 768)
+        cmdCloseTicket.Name = "cmdCloseTicket"
+        cmdCloseTicket.Size = New Size(144, 40)
+        cmdCloseTicket.TabIndex = 18
+        cmdCloseTicket.Text = "Close Ticket"
+        cmdCloseTicket.UseVisualStyleBackColor = False
+        ' 
+        ' cmdReset
+        ' 
+        cmdReset.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
+        cmdReset.FlatAppearance.BorderColor = Color.Black
+        cmdReset.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdReset.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdReset.FlatStyle = FlatStyle.Flat
+        cmdReset.Font = New Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cmdReset.Location = New Point(864, 768)
+        cmdReset.Name = "cmdReset"
+        cmdReset.Size = New Size(144, 40)
+        cmdReset.TabIndex = 19
+        cmdReset.Text = "Reset"
+        cmdReset.UseVisualStyleBackColor = False
+        ' 
+        ' cmdClose
+        ' 
+        cmdClose.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
+        cmdClose.FlatAppearance.BorderColor = Color.Black
+        cmdClose.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdClose.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(189), CByte(215), CByte(238))
+        cmdClose.FlatStyle = FlatStyle.Flat
+        cmdClose.Font = New Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cmdClose.Location = New Point(1016, 768)
+        cmdClose.Name = "cmdClose"
+        cmdClose.Size = New Size(144, 40)
+        cmdClose.TabIndex = 20
+        cmdClose.Text = "Close"
+        cmdClose.UseVisualStyleBackColor = False
+        ' 
+        ' TicketEditForm
+        ' 
+        AcceptButton = cmdSearch
+        AutoScaleDimensions = New SizeF(96F, 96F)
+        AutoScaleMode = AutoScaleMode.Dpi
+        BackColor = Color.FromArgb(CByte(142), CByte(187), CByte(245))
+        ClientSize = New Size(1180, 820)
+        Controls.Add(grpStatus)
+        Controls.Add(grpAssigned)
+        Controls.Add(lblQuickFind)
+        Controls.Add(txtQuickFind)
+        Controls.Add(cmdSearch)
+        Controls.Add(lblCount)
+        Controls.Add(lblFilterAccount)
+        Controls.Add(cboFilterAccount)
+        Controls.Add(lblFilterUser)
+        Controls.Add(cboFilterUser)
+        Controls.Add(lblFilterPriority)
+        Controls.Add(cboFilterPriority)
+        Controls.Add(cmdClearFilter)
+        Controls.Add(dgvTickets)
+        Controls.Add(grpTicket)
+        Controls.Add(chkNotifyUpdates)
+        Controls.Add(chkNotifyClose)
+        Controls.Add(cmdQuickPrint)
+        Controls.Add(cmdUpdateTicket)
+        Controls.Add(cmdCloseTicket)
+        Controls.Add(cmdReset)
+        Controls.Add(cmdClose)
+        Font = New Font("Calibri", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        MaximizeBox = False
+        MinimizeBox = False
+        Name = "TicketEditForm"
+        ShowInTaskbar = False
+        StartPosition = FormStartPosition.CenterParent
+        Text = "Edit Help Desk Tickets"
+        grpStatus.ResumeLayout(False)
+        grpStatus.PerformLayout()
+        grpAssigned.ResumeLayout(False)
+        grpAssigned.PerformLayout()
+        CType(dgvTickets, ComponentModel.ISupportInitialize).EndInit()
+        grpTicket.ResumeLayout(False)
+        grpTicket.PerformLayout()
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 
@@ -861,22 +901,22 @@ Partial Class TicketEditForm
     Friend WithEvents cmdSearch As System.Windows.Forms.Button
     Friend WithEvents lblCount As System.Windows.Forms.Label
     Friend WithEvents lblFilterAccount As System.Windows.Forms.Label
-    Friend WithEvents cboFilterAccount As System.Windows.Forms.ComboBox
+    Friend WithEvents cboFilterAccount As BorderedComboBox
     Friend WithEvents lblFilterUser As System.Windows.Forms.Label
-    Friend WithEvents cboFilterUser As System.Windows.Forms.ComboBox
+    Friend WithEvents cboFilterUser As BorderedComboBox
     Friend WithEvents lblFilterPriority As System.Windows.Forms.Label
-    Friend WithEvents cboFilterPriority As System.Windows.Forms.ComboBox
+    Friend WithEvents cboFilterPriority As BorderedComboBox
     Friend WithEvents cmdClearFilter As System.Windows.Forms.Button
     Friend WithEvents dgvTickets As System.Windows.Forms.DataGridView
     Friend WithEvents grpTicket As System.Windows.Forms.GroupBox
     Friend WithEvents lblTicketNo As System.Windows.Forms.Label
     Friend WithEvents txtTicketNo As System.Windows.Forms.TextBox
     Friend WithEvents lblAccount As System.Windows.Forms.Label
-    Friend WithEvents cboAccount As System.Windows.Forms.ComboBox
+    Friend WithEvents cboAccount As BorderedComboBox
     Friend WithEvents lblRequestBy As System.Windows.Forms.Label
-    Friend WithEvents cboRequestBy As System.Windows.Forms.ComboBox
+    Friend WithEvents cboRequestBy As BorderedComboBox
     Friend WithEvents lblAddContact As System.Windows.Forms.Label
-    Friend WithEvents cboAddContact As System.Windows.Forms.ComboBox
+    Friend WithEvents cboAddContact As BorderedComboBox
     Friend WithEvents lblCadenceID As System.Windows.Forms.Label
     Friend WithEvents txtCadenceID As System.Windows.Forms.TextBox
     Friend WithEvents cmdCadenceStatus As System.Windows.Forms.Button
@@ -885,17 +925,17 @@ Partial Class TicketEditForm
     Friend WithEvents lblPC_Nbr As System.Windows.Forms.Label
     Friend WithEvents txtPC_Nbr As System.Windows.Forms.TextBox
     Friend WithEvents lblStatus As System.Windows.Forms.Label
-    Friend WithEvents cboStatus As System.Windows.Forms.ComboBox
+    Friend WithEvents cboStatus As BorderedComboBox
     Friend WithEvents lblPriority As System.Windows.Forms.Label
-    Friend WithEvents cboPriority As System.Windows.Forms.ComboBox
+    Friend WithEvents cboPriority As BorderedComboBox
     Friend WithEvents lblSoftware As System.Windows.Forms.Label
-    Friend WithEvents cboSoftware As System.Windows.Forms.ComboBox
+    Friend WithEvents cboSoftware As BorderedComboBox
     Friend WithEvents lblAssignedTo As System.Windows.Forms.Label
-    Friend WithEvents cboAssignedTo As System.Windows.Forms.ComboBox
+    Friend WithEvents cboAssignedTo As BorderedComboBox
     Friend WithEvents lblTier As System.Windows.Forms.Label
-    Friend WithEvents cboTier As System.Windows.Forms.ComboBox
+    Friend WithEvents cboTier As BorderedComboBox
     Friend WithEvents lblResolution As System.Windows.Forms.Label
-    Friend WithEvents cboResolution As System.Windows.Forms.ComboBox
+    Friend WithEvents cboResolution As BorderedComboBox
     Friend WithEvents lblRequestDate As System.Windows.Forms.Label
     Friend WithEvents dtpRequestDate As System.Windows.Forms.DateTimePicker
     Friend WithEvents lblNeedBy As System.Windows.Forms.Label
@@ -915,4 +955,6 @@ Partial Class TicketEditForm
     Friend WithEvents cmdCloseTicket As System.Windows.Forms.Button
     Friend WithEvents cmdReset As System.Windows.Forms.Button
     Friend WithEvents cmdClose As System.Windows.Forms.Button
+    Friend WithEvents lblAttachment As System.Windows.Forms.Label
+    Friend WithEvents cmdOpenAttachment As System.Windows.Forms.Button
 End Class

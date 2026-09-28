@@ -46,6 +46,8 @@ Public Class TicketDetail
     Public Property ComputerNumber As String
     Public Property Description As String
     Public Property Notes As String
+    ''' <summary>Attachment path (read-only here; set when the ticket is added).</summary>
+    Public Property FileName As String
 End Class
 
 ''' <summary>Raised when someone else saved the ticket after it was loaded.</summary>
@@ -99,7 +101,7 @@ Public Module TicketEdits
             "SELECT TOP 1 UniqueKey, ID, [Timestamp], RTRIM(AccountNo) AS AccountNo, RequestBy, AdditionalContact, Status,
                     Priority, Software, AssignedTo, AssignedTier, ResolutionType, RequestDate, RequestedByDate,
                     CloseDate, AutoCloseDate, RTRIM(CadenceID) AS CadenceID, RTRIM(OrderNumber) AS OrderNumber,
-                    RTRIM(ComputerNumber) AS ComputerNumber, DescriptionDetail, Notes
+                    RTRIM(ComputerNumber) AS ComputerNumber, DescriptionDetail, Notes, RTRIM(FileName) AS FileName
              FROM dbo.MDS_HelpDesk WHERE ID = @id",
             Db.P("@id", ticketId))
         If dt.Rows.Count = 0 Then Return Nothing
@@ -125,7 +127,8 @@ Public Module TicketEdits
             .OrderNumber = AsString(r("OrderNumber")),
             .ComputerNumber = AsString(r("ComputerNumber")),
             .Description = AsString(r("DescriptionDetail")),
-            .Notes = AsString(r("Notes"))
+            .Notes = AsString(r("Notes")),
+            .FileName = AsString(r("FileName"))
         }
     End Function
 

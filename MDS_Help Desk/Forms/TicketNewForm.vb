@@ -9,6 +9,8 @@ Public Class TicketNewForm
 
     ''' <summary>True until Load finishes; InitializeComponent raises CheckedChanged before then.</summary>
     Private _loading As Boolean = True
+    ''' <summary>The file chosen with Browse; copied to the share when the ticket is submitted.</summary>
+    Private _attachmentPath As String
 
     Private Sub TicketNewForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _loading = True
@@ -124,6 +126,7 @@ Public Class TicketNewForm
             MessageBox.Show("Could not load Cadence orders for this account." & vbCrLf & vbCrLf & ex.Message,
                             Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
+        cboAccount.BackColor = SystemColors.Window
     End Sub
 
     Private Sub cboCadenceID_Leave(sender As Object, e As EventArgs) Handles cboCadenceID.Leave
@@ -136,6 +139,7 @@ Public Class TicketNewForm
             MessageBox.Show("Could not look up the order number." & vbCrLf & vbCrLf & ex.Message,
                             Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
+        cboCadenceID.BackColor = SystemColors.Window
     End Sub
 
     Private Sub NewAccountFields_Leave(sender As Object, e As EventArgs) Handles txtNewAccountNo.Leave, dtpLaunchDate.Leave
@@ -148,6 +152,7 @@ Public Class TicketNewForm
         txtDescription.Text = "User Name: " & txtNewUserName.Text.Trim() & vbCrLf &
                               "Last 4 Social: " & txtNewUserSocial.Text.Trim() & vbCrLf &
                               "Telephone: " & txtNewUserPhone.Text & vbCrLf & vbCrLf
+        txtDescription.BackColor = SystemColors.Window
     End Sub
 
     Private Sub txtNewUserSocial_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNewUserSocial.KeyPress
@@ -174,8 +179,10 @@ Public Class TicketNewForm
             Cursor = Cursors.Default
         End Try
 
+        Dim savedAttachment = SaveAttachment(ticketId)
+
         Try
-            ShowEmail(ticketId, ticket)
+            ShowEmail(ticketId, ticket, savedAttachment)
         Catch ex As Exception
             MessageBox.Show($"Ticket {ticketId} was saved, but the Outlook email could not be opened." & vbCrLf & vbCrLf & ex.Message,
                             Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -247,8 +254,28 @@ Public Class TicketNewForm
         Return Nothing
     End Function
 
+    ''' <summary>
+    ''' Copies the chosen file to the attachments share and records it on the ticket.
+    ''' Returns the saved path, or Nothing if there was no file or it could not be saved.
+    ''' </summary>
+    Private Function SaveAttachment(ticketId As Integer) As String
+        If _attachmentPath Is Nothing Then Return Nothing
+        Try
+            Cursor = Cursors.WaitCursor
+            Dim saved = Attachments.CopyToShare(ticketId, _attachmentPath)
+            Tickets.SetAttachment(ticketId, saved)
+            Return saved
+        Catch ex As Exception When TypeOf ex Is IO.IOException OrElse TypeOf ex Is UnauthorizedAccessException OrElse TypeOf ex Is SqlException
+            MessageBox.Show($"Ticket {ticketId} was saved, but the attachment could not be added." & vbCrLf & vbCrLf & ex.Message,
+                            Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return Nothing
+        Finally
+            Cursor = Cursors.Default
+        End Try
+    End Function
+
     ''' <summary>Opens the Outlook draft for review, with the same recipients as Access.</summary>
-    Private Sub ShowEmail(ticketId As Integer, t As NewTicket)
+    Private Sub ShowEmail(ticketId As Integer, t As NewTicket, attachment As String)
         Dim subject = $"Help Desk Ticket {ticketId} Priority: {cboPriority.Text} Software: {cboSoftware.Text}"
         Dim body = $"Ticket No: {ticketId}" & vbCrLf &
                    $"Account: {t.AccountNo}" & vbCrLf &
@@ -258,6 +285,7 @@ Public Class TicketNewForm
                    $"Order Number: {t.OrderNumber}" & vbCrLf & vbCrLf &
                    "Description:" & vbCrLf & t.Description & vbCrLf & vbCrLf &
                    $"Computer Nbr: {t.ComputerNumber}"
+        If attachment IsNot Nothing Then body &= vbCrLf & $"Attachment: {attachment}"
 
         Dim toAddress = AppConfig.SupportEmail
         Dim cc As String = Nothing
@@ -267,7 +295,33 @@ Public Class TicketNewForm
             cc = SelectedEmail(cboAddContact)
         End If
 
-        OutlookMail.ShowDraft(toAddress, cc, subject, body)
+        OutlookMail.ShowDraft(toAddress, cc, subject, body, attachment)
+    End Sub
+
+    Private Sub cmdBrowse_Click(sender As Object, e As EventArgs) Handles cmdBrowse.Click
+        Using dlg As New OpenFileDialog With {
+            .Title = "Attach a file to the ticket",
+            .Filter = "All files (*.*)|*.*",
+            .CheckFileExists = True
+        }
+            If dlg.ShowDialog(Me) <> DialogResult.OK Then Return
+            Dim problem = Attachments.CheckFile(dlg.FileName)
+            If problem IsNot Nothing Then
+                MessageBox.Show(problem, Caption, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Return
+            End If
+            SetAttachment(dlg.FileName)
+        End Using
+    End Sub
+
+    Private Sub cmdRemoveAttachment_Click(sender As Object, e As EventArgs) Handles cmdRemoveAttachment.Click
+        SetAttachment(Nothing)
+    End Sub
+
+    Private Sub SetAttachment(path As String)
+        _attachmentPath = path
+        txtAttachment.Text = If(path Is Nothing, "", Attachments.Describe(path))
+        cmdRemoveAttachment.Enabled = path IsNot Nothing
     End Sub
 
     Private Sub cmdReset_Click(sender As Object, e As EventArgs) Handles cmdReset.Click
@@ -305,6 +359,7 @@ Public Class TicketNewForm
         txtNewUserSocial.Clear()
         txtNewUserPhone.Clear()
         txtDescription.Clear()
+        SetAttachment(Nothing)
         optGeneral.Checked = True
         _loading = False
         ShowTypeFields()
@@ -336,6 +391,98 @@ Public Class TicketNewForm
         Dim typed = cboCadenceID.Text.Trim().ToUpperInvariant()
         Return If(typed.Length = 0, Nothing, typed)
     End Function
+
+    Private Sub cboUserID_Enter(sender As Object, e As EventArgs) Handles cboUserID.Enter
+        cboUserID.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+
+    Private Sub cboUserID_Leave(sender As Object, e As EventArgs) Handles cboUserID.Leave
+        cboUserID.BackColor = SystemColors.Window
+    End Sub
+
+    Private Sub cboAccount_Enter(sender As Object, e As EventArgs) Handles cboAccount.Enter
+        cboAccount.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+    Private Sub cboSoftware_Enter(sender As Object, e As EventArgs) Handles cboSoftware.Enter
+        cboSoftware.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+    Private Sub cboSoftware_Leave(sender As Object, e As EventArgs) Handles cboAccount.Enter
+        cboSoftware.BackColor = SystemColors.Window
+    End Sub
+
+    Private Sub cboPriority_Enter(sender As Object, e As EventArgs) Handles cboPriority.Enter
+        cboPriority.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+    Private Sub cboPriority_Leave(sender As Object, e As EventArgs) Handles cboAccount.Enter
+        cboPriority.BackColor = SystemColors.Window
+    End Sub
+    Private Sub dtpDateNeeded_Enter(sender As Object, e As EventArgs) Handles dtpDateNeeded.Enter
+        dtpDateNeeded.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+
+    Private Sub dtpDateNeeded_Leave(sender As Object, e As EventArgs) Handles dtpDateNeeded.Leave
+        dtpDateNeeded.BackColor = SystemColors.Window
+    End Sub
+
+    Private Sub cboRequestedBy_Enter(sender As Object, e As EventArgs) Handles cboRequestedBy.Enter
+        cboRequestedBy.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+    Private Sub RequestedBy_Leave(sender As Object, e As EventArgs) Handles cboAccount.Enter
+        cboRequestedBy.BackColor = SystemColors.Window
+    End Sub
+
+    Private Sub cboAddContact_Enter(sender As Object, e As EventArgs) Handles cboAddContact.Enter
+        cboAddContact.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+    Private Sub cboAddContact_Leave(sender As Object, e As EventArgs) Handles cboAccount.Enter
+        cboAddContact.BackColor = SystemColors.Window
+    End Sub
+
+    Private Sub cboCadenceID_Enter(sender As Object, e As EventArgs) Handles cboCadenceID.Enter
+        cboCadenceID.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+
+    Private Sub txtOrderNbr_Enter(sender As Object, e As EventArgs) Handles txtOrderNbr.Enter
+        txtOrderNbr.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+    Private Sub txtOrderNbr_Leave(sender As Object, e As EventArgs) Handles cboAccount.Enter
+        txtOrderNbr.BackColor = SystemColors.Window
+    End Sub
+
+    Private Sub txtPC_Nbr_Enter(sender As Object, e As EventArgs) Handles txtPC_Nbr.Enter
+        txtPC_Nbr.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+    Private Sub txtPC_Nbr_Leave(sender As Object, e As EventArgs) Handles cboAccount.Enter
+        txtPC_Nbr.BackColor = SystemColors.Window
+    End Sub
+
+    Private Sub txtDescription_Enter(sender As Object, e As EventArgs) Handles txtDescription.Enter
+        txtDescription.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+    Private Sub txtDescription_Leave(sender As Object, e As EventArgs) Handles cboAccount.Enter
+        txtDescription.BackColor = SystemColors.Window
+    End Sub
+
+    Private Sub txtNewUserName_Enter(sender As Object, e As EventArgs) Handles txtNewUserName.Enter
+        txtNewAccountNo.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+    Private Sub txtNewUserName_Leave(sender As Object, e As EventArgs) Handles cboAccount.Enter
+        txtNewAccountNo.BackColor = SystemColors.Window
+    End Sub
+
+    Private Sub dtpLaunchDate_Enter(sender As Object, e As EventArgs) Handles dtpLaunchDate.Enter
+        dtpLaunchDate.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+    Private Sub dtpLaunchDate_Leave(sender As Object, e As EventArgs) Handles cboAccount.Enter
+        dtpLaunchDate.BackColor = SystemColors.Window
+    End Sub
+
+    Private Sub txtNewUserPhone_Enter(sender As Object, e As EventArgs) Handles txtNewUserPhone.Enter
+        txtNewUserPhone.BackColor = Color.FromArgb(255, 255, 0)
+    End Sub
+    Private Sub txtNewUserPhone_Leave(sender As Object, e As EventArgs) Handles cboAccount.Enter
+        txtNewUserPhone.BackColor = SystemColors.Window
+    End Sub
 
 #End Region
 

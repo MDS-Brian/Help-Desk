@@ -1,7 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class UnitIdsForm
-    Inherits System.Windows.Forms.Form
-
+    Inherits AppForm
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -23,7 +22,7 @@ Partial Class UnitIdsForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblFilter = New System.Windows.Forms.Label()
-        Me.cboWarehouse = New System.Windows.Forms.ComboBox()
+        Me.cboWarehouse = New BorderedComboBox()
         Me.lblCount = New System.Windows.Forms.Label()
         Me.dgvUnits = New System.Windows.Forms.DataGridView()
         Me.cmdClose = New System.Windows.Forms.Button()
@@ -114,7 +113,7 @@ Partial Class UnitIdsForm
     End Sub
 
     Friend WithEvents lblFilter As System.Windows.Forms.Label
-    Friend WithEvents cboWarehouse As System.Windows.Forms.ComboBox
+    Friend WithEvents cboWarehouse As BorderedComboBox
     Friend WithEvents lblCount As System.Windows.Forms.Label
     Friend WithEvents dgvUnits As System.Windows.Forms.DataGridView
     Friend WithEvents cmdClose As System.Windows.Forms.Button

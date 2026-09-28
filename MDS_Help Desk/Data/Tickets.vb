@@ -80,4 +80,13 @@ Public Module Tickets
         End Using
     End Function
 
+    ''' <summary>Records the attachment path on a ticket (MDS_HelpDesk.FileName).</summary>
+    Public Sub SetAttachment(ticketId As Integer, path As String)
+        Using cn = Db.Open(Db.MDS),
+              cmd = Db.NewCommand(cn, "UPDATE dbo.MDS_HelpDesk SET FileName = @file WHERE ID = @id",
+                                  Db.P("@file", path), Db.P("@id", ticketId))
+            cmd.ExecuteNonQuery()
+        End Using
+    End Sub
+
 End Module

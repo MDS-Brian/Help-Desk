@@ -59,6 +59,24 @@ Public NotInheritable Class AppConfig
         End Get
     End Property
 
+    ''' <summary>Share that ticket attachments are copied to (one sub-folder per ticket).</summary>
+    Public Shared ReadOnly Property AttachmentsFolder As String
+        Get
+            Return GetValue("Attachments", "Folder")
+        End Get
+    End Property
+
+    Public Shared ReadOnly Property AttachmentMaxBytes As Long
+        Get
+            Dim sec As JsonElement
+            Dim val As JsonElement
+            If Root.TryGetProperty("Attachments", sec) AndAlso sec.TryGetProperty("MaxSizeMB", val) Then
+                Return val.GetInt64() * 1024L * 1024L
+            End If
+            Return 25L * 1024L * 1024L
+        End Get
+    End Property
+
     Public Shared ReadOnly Property AccountsDatabasePath As String
         Get
             Dim val As JsonElement

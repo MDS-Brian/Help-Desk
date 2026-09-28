@@ -1,7 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ComputersForm
-    Inherits System.Windows.Forms.Form
-
+    Inherits AppForm
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -23,9 +22,9 @@ Partial Class ComputersForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblFilterType = New System.Windows.Forms.Label()
-        Me.cboFilterType = New System.Windows.Forms.ComboBox()
+        Me.cboFilterType = New BorderedComboBox()
         Me.lblFilterWhse = New System.Windows.Forms.Label()
-        Me.cboFilterWhse = New System.Windows.Forms.ComboBox()
+        Me.cboFilterWhse = New BorderedComboBox()
         Me.cmdClearFilter = New System.Windows.Forms.Button()
         Me.lblCount = New System.Windows.Forms.Label()
         Me.dgvComputers = New System.Windows.Forms.DataGridView()
@@ -37,23 +36,23 @@ Partial Class ComputersForm
         Me.lblCml = New System.Windows.Forms.Label()
         Me.txtCml = New System.Windows.Forms.TextBox()
         Me.lblWindows = New System.Windows.Forms.Label()
-        Me.cboWindows = New System.Windows.Forms.ComboBox()
+        Me.cboWindows = New BorderedComboBox()
         Me.lblOffice = New System.Windows.Forms.Label()
         Me.txtOffice = New System.Windows.Forms.TextBox()
         Me.lblPackstation = New System.Windows.Forms.Label()
         Me.dtpPackstation = New System.Windows.Forms.DateTimePicker()
         Me.lblType = New System.Windows.Forms.Label()
-        Me.cboType = New System.Windows.Forms.ComboBox()
+        Me.cboType = New BorderedComboBox()
         Me.lblSentinel = New System.Windows.Forms.Label()
-        Me.cboSentinel = New System.Windows.Forms.ComboBox()
+        Me.cboSentinel = New BorderedComboBox()
         Me.lblIP = New System.Windows.Forms.Label()
         Me.txtIP = New System.Windows.Forms.TextBox()
         Me.lblWarehouse = New System.Windows.Forms.Label()
-        Me.cboWarehouse = New System.Windows.Forms.ComboBox()
+        Me.cboWarehouse = New BorderedComboBox()
         Me.lblModel = New System.Windows.Forms.Label()
         Me.txtModel = New System.Windows.Forms.TextBox()
         Me.lblVpn = New System.Windows.Forms.Label()
-        Me.cboVpn = New System.Windows.Forms.ComboBox()
+        Me.cboVpn = New BorderedComboBox()
         Me.lblUps = New System.Windows.Forms.Label()
         Me.txtUps = New System.Windows.Forms.TextBox()
         Me.lblUsps = New System.Windows.Forms.Label()
@@ -586,9 +585,9 @@ Partial Class ComputersForm
     End Sub
 
     Friend WithEvents lblFilterType As System.Windows.Forms.Label
-    Friend WithEvents cboFilterType As System.Windows.Forms.ComboBox
+    Friend WithEvents cboFilterType As BorderedComboBox
     Friend WithEvents lblFilterWhse As System.Windows.Forms.Label
-    Friend WithEvents cboFilterWhse As System.Windows.Forms.ComboBox
+    Friend WithEvents cboFilterWhse As BorderedComboBox
     Friend WithEvents cmdClearFilter As System.Windows.Forms.Button
     Friend WithEvents lblCount As System.Windows.Forms.Label
     Friend WithEvents dgvComputers As System.Windows.Forms.DataGridView
@@ -600,23 +599,23 @@ Partial Class ComputersForm
     Friend WithEvents lblCml As System.Windows.Forms.Label
     Friend WithEvents txtCml As System.Windows.Forms.TextBox
     Friend WithEvents lblWindows As System.Windows.Forms.Label
-    Friend WithEvents cboWindows As System.Windows.Forms.ComboBox
+    Friend WithEvents cboWindows As BorderedComboBox
     Friend WithEvents lblOffice As System.Windows.Forms.Label
     Friend WithEvents txtOffice As System.Windows.Forms.TextBox
     Friend WithEvents lblPackstation As System.Windows.Forms.Label
     Friend WithEvents dtpPackstation As System.Windows.Forms.DateTimePicker
     Friend WithEvents lblType As System.Windows.Forms.Label
-    Friend WithEvents cboType As System.Windows.Forms.ComboBox
+    Friend WithEvents cboType As BorderedComboBox
     Friend WithEvents lblSentinel As System.Windows.Forms.Label
-    Friend WithEvents cboSentinel As System.Windows.Forms.ComboBox
+    Friend WithEvents cboSentinel As BorderedComboBox
     Friend WithEvents lblIP As System.Windows.Forms.Label
     Friend WithEvents txtIP As System.Windows.Forms.TextBox
     Friend WithEvents lblWarehouse As System.Windows.Forms.Label
-    Friend WithEvents cboWarehouse As System.Windows.Forms.ComboBox
+    Friend WithEvents cboWarehouse As BorderedComboBox
     Friend WithEvents lblModel As System.Windows.Forms.Label
     Friend WithEvents txtModel As System.Windows.Forms.TextBox
     Friend WithEvents lblVpn As System.Windows.Forms.Label
-    Friend WithEvents cboVpn As System.Windows.Forms.ComboBox
+    Friend WithEvents cboVpn As BorderedComboBox
     Friend WithEvents lblUps As System.Windows.Forms.Label
     Friend WithEvents txtUps As System.Windows.Forms.TextBox
     Friend WithEvents lblUsps As System.Windows.Forms.Label

@@ -1,7 +1,6 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class PrintTicketsForm
-    Inherits System.Windows.Forms.Form
-
+    Inherits AppForm
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -36,13 +35,13 @@ Partial Class PrintTicketsForm
         Me.dtpEnd = New System.Windows.Forms.DateTimePicker()
         Me.grpLimit = New System.Windows.Forms.GroupBox()
         Me.lblAccount = New System.Windows.Forms.Label()
-        Me.cboAccount = New System.Windows.Forms.ComboBox()
+        Me.cboAccount = New BorderedComboBox()
         Me.lblPriority = New System.Windows.Forms.Label()
-        Me.cboPriority = New System.Windows.Forms.ComboBox()
+        Me.cboPriority = New BorderedComboBox()
         Me.lblRequestBy = New System.Windows.Forms.Label()
-        Me.cboRequestBy = New System.Windows.Forms.ComboBox()
+        Me.cboRequestBy = New BorderedComboBox()
         Me.lblAssignedTo = New System.Windows.Forms.Label()
-        Me.cboAssignedTo = New System.Windows.Forms.ComboBox()
+        Me.cboAssignedTo = New BorderedComboBox()
         Me.cmdPreviewTickets = New System.Windows.Forms.Button()
         Me.grpCounts = New System.Windows.Forms.GroupBox()
         Me.optCountsAccount = New System.Windows.Forms.RadioButton()
@@ -385,13 +384,13 @@ Partial Class PrintTicketsForm
     Friend WithEvents dtpEnd As System.Windows.Forms.DateTimePicker
     Friend WithEvents grpLimit As System.Windows.Forms.GroupBox
     Friend WithEvents lblAccount As System.Windows.Forms.Label
-    Friend WithEvents cboAccount As System.Windows.Forms.ComboBox
+    Friend WithEvents cboAccount As BorderedComboBox
     Friend WithEvents lblPriority As System.Windows.Forms.Label
-    Friend WithEvents cboPriority As System.Windows.Forms.ComboBox
+    Friend WithEvents cboPriority As BorderedComboBox
     Friend WithEvents lblRequestBy As System.Windows.Forms.Label
-    Friend WithEvents cboRequestBy As System.Windows.Forms.ComboBox
+    Friend WithEvents cboRequestBy As BorderedComboBox
     Friend WithEvents lblAssignedTo As System.Windows.Forms.Label
-    Friend WithEvents cboAssignedTo As System.Windows.Forms.ComboBox
+    Friend WithEvents cboAssignedTo As BorderedComboBox
     Friend WithEvents cmdPreviewTickets As System.Windows.Forms.Button
     Friend WithEvents grpCounts As System.Windows.Forms.GroupBox
     Friend WithEvents optCountsAccount As System.Windows.Forms.RadioButton

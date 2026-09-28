@@ -8,7 +8,7 @@ Public Module OutlookMail
 
     Private Const olMailItem As Integer = 0
 
-    Public Sub ShowDraft(toAddress As String, cc As String, subject As String, body As String)
+    Public Sub ShowDraft(toAddress As String, cc As String, subject As String, body As String, Optional attachmentPath As String = Nothing)
         Dim outlookType = Type.GetTypeFromProgID("Outlook.Application")
         If outlookType Is Nothing Then
             Throw New InvalidOperationException("Microsoft Outlook is not installed on this computer.")
@@ -19,6 +19,9 @@ Public Module OutlookMail
         mail.CC = If(cc, "")
         mail.Subject = subject
         mail.Body = body
+        If Not String.IsNullOrEmpty(attachmentPath) AndAlso IO.File.Exists(attachmentPath) Then
+            mail.Attachments.Add(attachmentPath)
+        End If
         mail.Display()
     End Sub
 

@@ -100,7 +100,20 @@ Public Class TicketEditForm
             Cursor = Cursors.Default
         End Try
 
-        If _current IsNot Nothing Then SelectGridRow(_current.ID)
+        If _current IsNot Nothing Then
+            SelectGridRow(_current.ID)
+        Else
+            SelectLastRow()
+        End If
+    End Sub
+
+    ''' <summary>Selects and scrolls to the newest ticket (the list is sorted by ticket number).</summary>
+    Private Sub SelectLastRow()
+        If dgvTickets.Rows.Count = 0 Then Return
+        Dim last = dgvTickets.Rows(dgvTickets.Rows.Count - 1)
+        dgvTickets.CurrentCell = last.Cells("ID")
+        last.Selected = True
+        dgvTickets.FirstDisplayedScrollingRowIndex = last.Index
     End Sub
 
     Private Sub FormatGrid()
@@ -114,6 +127,8 @@ Public Class TicketEditForm
         SetColumn("AssignedTo", "Assigned To", 110)
         SetColumn("CloseDate", "Close Date", 90, "d")
         dgvTickets.Columns("Description").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        ' Sort by ticket number, shown with the sort arrow on the Ticket column.
+        dgvTickets.Sort(dgvTickets.Columns("ID"), System.ComponentModel.ListSortDirection.Ascending)
     End Sub
 
     Private Sub SetColumn(name As String, header As String, width As Integer, Optional format As String = Nothing)
@@ -218,6 +233,9 @@ Public Class TicketEditForm
         txtPC_Nbr.Text = t.ComputerNumber
         txtDescription.Text = t.Description
         txtNotes.Text = t.Notes
+        cmdOpenAttachment.Enabled = Not String.IsNullOrEmpty(t.FileName)
+        cmdOpenAttachment.Text = If(String.IsNullOrEmpty(t.FileName), "(no attachment)",
+                                    "Open " & IO.Path.GetFileName(t.FileName))
 
         cmdCloseTicket.Text = If(t.CloseDate.HasValue, "Re-Open Ticket", "Close Ticket")
         ' Send the assignment email by default only when the ticket is not assigned yet.
@@ -250,6 +268,8 @@ Public Class TicketEditForm
         grpTicket.Enabled = False
         cmdUpdateTicket.Enabled = False
         cmdCloseTicket.Enabled = False
+        cmdOpenAttachment.Enabled = False
+        cmdOpenAttachment.Text = "Open Attachment"
         _loading = False
         _dirty = False
     End Sub
@@ -437,6 +457,20 @@ Public Class TicketEditForm
         ClearTicket()
         RefreshList()
         If reopenId.HasValue Then OpenTicket(reopenId.Value)
+    End Sub
+
+#End Region
+
+#Region "Attachment"
+
+    Private Sub cmdOpenAttachment_Click(sender As Object, e As EventArgs) Handles cmdOpenAttachment.Click
+        If _current Is Nothing OrElse String.IsNullOrEmpty(_current.FileName) Then Return
+        Try
+            Attachments.Open(_current.FileName)
+        Catch ex As Exception When TypeOf ex Is IO.IOException OrElse TypeOf ex Is UnauthorizedAccessException OrElse TypeOf ex Is ComponentModel.Win32Exception
+            MessageBox.Show("The attachment could not be opened." & vbCrLf & vbCrLf & ex.Message,
+                            Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
     End Sub
 
 #End Region

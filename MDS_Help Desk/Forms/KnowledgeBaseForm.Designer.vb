@@ -1,7 +1,6 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class KnowledgeBaseForm
-    Inherits System.Windows.Forms.Form
-
+    Inherits AppForm
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -23,7 +22,7 @@ Partial Class KnowledgeBaseForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblSearchProcess = New System.Windows.Forms.Label()
-        Me.cboSearchProcess = New System.Windows.Forms.ComboBox()
+        Me.cboSearchProcess = New BorderedComboBox()
         Me.lblKeyword = New System.Windows.Forms.Label()
         Me.txtKeyword = New System.Windows.Forms.TextBox()
         Me.cmdSearch = New System.Windows.Forms.Button()
@@ -35,7 +34,7 @@ Partial Class KnowledgeBaseForm
         Me.lblEntered = New System.Windows.Forms.Label()
         Me.dtpEntered = New System.Windows.Forms.DateTimePicker()
         Me.lblEntryProcess = New System.Windows.Forms.Label()
-        Me.cboEntryProcess = New System.Windows.Forms.ComboBox()
+        Me.cboEntryProcess = New BorderedComboBox()
         Me.lblError = New System.Windows.Forms.Label()
         Me.txtError = New System.Windows.Forms.TextBox()
         Me.lblWorkaround = New System.Windows.Forms.Label()
@@ -340,7 +339,7 @@ Partial Class KnowledgeBaseForm
     End Sub
 
     Friend WithEvents lblSearchProcess As System.Windows.Forms.Label
-    Friend WithEvents cboSearchProcess As System.Windows.Forms.ComboBox
+    Friend WithEvents cboSearchProcess As BorderedComboBox
     Friend WithEvents lblKeyword As System.Windows.Forms.Label
     Friend WithEvents txtKeyword As System.Windows.Forms.TextBox
     Friend WithEvents cmdSearch As System.Windows.Forms.Button
@@ -352,7 +351,7 @@ Partial Class KnowledgeBaseForm
     Friend WithEvents lblEntered As System.Windows.Forms.Label
     Friend WithEvents dtpEntered As System.Windows.Forms.DateTimePicker
     Friend WithEvents lblEntryProcess As System.Windows.Forms.Label
-    Friend WithEvents cboEntryProcess As System.Windows.Forms.ComboBox
+    Friend WithEvents cboEntryProcess As BorderedComboBox
     Friend WithEvents lblError As System.Windows.Forms.Label
     Friend WithEvents txtError As System.Windows.Forms.TextBox
     Friend WithEvents lblWorkaround As System.Windows.Forms.Label
